@@ -10,8 +10,8 @@
   - Las funciones que va a llevar nuestra aplicación es que al ingresar nos pida que introduzcamos el usuario y contraseña, en el inicio mostrara las habitaciones que se están disponibles, también traerá apartados como seguridad, formas de pago, ayuda, en el apartado de seguridad traerá una opción en donde los padres de los estudiantes puedan monitorear a sus hijos para ver o notificar si el estudiante cumple con los pagos, sobre su comportamiento dentro de la habitación. Nuestra aplicación va a facilitar a los padres en saber sobre su comportamiento de sus hijos.
 
   ## 1.4 Diseño de la base de datos (Diagrama entidad - relación)
-  (![image](https://user-images.githubusercontent.com/97567256/173380360-1afb2551-ce1c-460d-a83a-322c9dcafb0b.png)
-)
+  ![image](https://lh3.googleusercontent.com/fS7QbgTvbTlYkYy1Dxmrm4QzXsGthIkU1FAe6ZyJpC1DjSpLyEgBXtM5IM-MLoScF_nknLM=s170)
+
 
   ## 1.5 Creación de la base de datos (Script)
   ### Tabla Usuarios
