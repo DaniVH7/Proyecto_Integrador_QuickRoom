@@ -13,6 +13,7 @@ En nuestra aplicación va enfocada a estudiantes ingresados en la utec que no so
 
 1.3 Definición de las funciones del proyecto
 Las funciones que va a llevar nuestra aplicación es que al ingresar nos diga que introduzcamos el usuario y contraseña, en el inició que nos muestre las habitaciones que se están disponibles, también traerá apartados como seguridad, formas de pago, ayuda, en el apartado de seguridad traerá una opción en donde los padres de los estudiantes puedan monitorear a sus hijos para ver o notificar si el estudiante cumple con los pagos, sobre su comportamiento dentro de la habitación. Nuestra aplicación va a facilitar a los padres en saber sobre su comportamiento de sus hijos.
+
 1.4 Diseño de la base de datos (Diagrama entidad - relación)
 ![image](https://user-images.githubusercontent.com/102370094/173268857-e740a664-7846-4309-a2b9-bb3203284a4b.png)
 
