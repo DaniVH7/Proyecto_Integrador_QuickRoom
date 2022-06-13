@@ -19,21 +19,21 @@ Las funciones que va a llevar nuestra aplicación es que al ingresar nos pida qu
 ![image](https://user-images.githubusercontent.com/102370094/173268857-e740a664-7846-4309-a2b9-bb3203284a4b.png)
 
 1.5 Creación de la base de datos (Script)
-https://replit.com/@DaniVH7/ProyectoIntegradorQuickRoom#BasedeDatos/Usuarios.sql
+[Base de datos] (https://replit.com/@DaniVH7/ProyectoIntegradorQuickRoom#BasedeDatos/Usuarios.sql)
 
 1.6 Diccionario de datos
 
 Usuarios
-Campo	Tipo	Tamaño	Descripción
-Uid	Integer	Not Null	Clave de Usuario
-Nombre	Varchar	250	Nombre del usuario
-Apellidop	Varchar	250	Apellido del usuario
-Apellidom	Varchar	250	Apellido de usuario
-Edad	Integer	250	Edad del usuario
-Email	Varchar	250	Email del usuario
-Password	Varchar	32	Contraseña del usuario
-Teléfono	Integer	Not null	Teléfono del usuario
-Estatus	Varchar	50	Permite saber si está activo o no
+|Campo|	Tipo|	Tamaño|	Descripción|
+|Uid	|Integer|	Not Null|	Clave de Usuario|
+|Nombre	Varchar|	250|	Nombre del usuario|
+|Apellidop	|Varchar|	250	Apellido del usuario|
+|Apellidom	|Varchar|	250	Apellido de usuario|
+|Edad	Integer|	250	|Edad del usuario|
+|Email|	Varchar	250	|Email del usuario|
+|Password	|Varchar	32|	Contraseña del usuario|
+|Teléfono|	Integer	|Not null	Teléfono del usuario|
+|Estatus|	Varchar	50|	Permite saber si está activo o no|
 
 
 Administrador
