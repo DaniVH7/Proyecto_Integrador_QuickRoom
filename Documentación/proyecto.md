@@ -11,7 +11,7 @@
 
   ## 1.4 Diseño de la base de datos (Diagrama entidad - relación)
   ![image](https://lh3.googleusercontent.com/fS7QbgTvbTlYkYy1Dxmrm4QzXsGthIkU1FAe6ZyJpC1DjSpLyEgBXtM5IM-MLoScF_nknLM=s170)
-)
+
 
   ## 1.5 Creación de la base de datos (Script)
   ### Tabla Usuarios
