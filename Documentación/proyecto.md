@@ -9,16 +9,17 @@ rentar cerca de donde van a estudiar, ahorrarán tiempo, dinero y estarán un po
 seguros.
 
 1.2 Definición del proyecto:
-En nuestra aplicación va enfocada a estudiantes ingresados en la utec que no son de Tulancingo o de Tulancingo pero que les quede lejos la escuela, nuestra aplicación les ayudara a buscar una habitación que se ajuste a sus necesidades.
+En nuestra aplicación va enfocada a estudiantes ingresados en la utec que no son de Tulancingo o que radican en Tulancingo pero que les quede lejos la escuela, nuestra aplicación les ayudara a buscar una habitación que cuente con lo necesaria para subsistir deacuerdo a sus necesidades.
 
 1.3 Definición de las funciones del proyecto
-Las funciones que va a llevar nuestra aplicación es que al ingresar nos diga que introduzcamos el usuario y contraseña, en el inició que nos muestre las habitaciones que se están disponibles, también traerá apartados como seguridad, formas de pago, ayuda, en el apartado de seguridad traerá una opción en donde los padres de los estudiantes puedan monitorear a sus hijos para ver o notificar si el estudiante cumple con los pagos, sobre su comportamiento dentro de la habitación. Nuestra aplicación va a facilitar a los padres en saber sobre su comportamiento de sus hijos.
+Las funciones que va a llevar nuestra aplicación es que al ingresar nos pida que introduzcamos el usuario y contraseña, en el inicio mostrara las habitaciones que se están disponibles, también traerá apartados como seguridad, formas de pago, ayuda, en el apartado de seguridad traerá una opción en donde los padres de los estudiantes puedan monitorear a sus hijos para ver o notificar si el estudiante cumple con los pagos, sobre su comportamiento dentro de la habitación. Nuestra aplicación va a facilitar a los padres en saber sobre su comportamiento de sus hijos.
 
 1.4 Diseño de la base de datos (Diagrama entidad - relación)
 ![image](https://user-images.githubusercontent.com/102370094/173268857-e740a664-7846-4309-a2b9-bb3203284a4b.png)
 
 1.5 Creación de la base de datos (Script)
 https://replit.com/@DaniVH7/ProyectoIntegradorQuickRoom#BasedeDatos/Usuarios.sql
+
 1.6 Diccionario de datos
 
 Usuarios
