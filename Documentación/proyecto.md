@@ -12,7 +12,7 @@
   - Las funciones que lleva la aplicación es que al ingresar nos pida un usuario y contraseña, en el inicio mostrara las habitaciones que  están disponibles, contara con apartados de seguridad, formas de pago, ayuda, en el apartado de seguridad tendra una opción en donde los padres de los estudiantes puedan monitorear a sus hijos,  ver o notificar si el estudiante cumple con los pagos de renta. La aplicación va a facilitar a los padres en saber sobre su comportamiento de sus hijos.
 
   ## 1.4 Diseño de la base de datos (Diagrama entidad - relación)
-  ![image](68747470733a2f2f6c68332e676f6f676c6575736572636f6e74656e742e636f6d2f665337516267547662546c596b59793144786d726d34517a5873477468496b5531464165365a794a704331446a53704c7945674258744d35494d2d4d4c6f5363465f6e6b6e4c4d3d73313730.jpg)
+  ![image](68747470733a2f2f6c68332e676f6f676c6575736572636f6e74656e742e636f6d2f665337516267547662546c596b59793144786d726d34517a5873477468496b5531464165365a794a704331446a53704c7945674258744d35494d2d4d4c6f5363465f6e6b6e4c4d3d73313730)
 
 
   ## 1.5 Creación de la base de datos (Script)
