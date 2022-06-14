@@ -11,8 +11,8 @@
  ## 1.3 Definición de las funciones del proyecto:
   - Las funciones que lleva la aplicación es que al ingresar nos pida un usuario y contraseña, en el inicio mostrara las habitaciones que  están disponibles, contara con apartados de seguridad, formas de pago, ayuda, en el apartado de seguridad tendra una opción en donde los padres de los estudiantes puedan monitorear a sus hijos,  ver o notificar si el estudiante cumple con los pagos de renta. La aplicación va a facilitar a los padres en saber sobre su comportamiento de sus hijos.
 
-  ## 1.4 Diseño de la base de datos (Diagrama entidad - relación)
-  ![image](https://lh3.googleusercontent.com/fS7QbgTvbTlYkYy1Dxmrm4QzXsGthIkU1FAe6ZyJpC1DjSpLyEgBXtM5IM-MLoScF_nknLM=s170)
+ ## 1.4 Diseño de la base de datos (Diagrama entidad - relación)
+ 
 
 
   ## 1.5 Creación de la base de datos (Script)
