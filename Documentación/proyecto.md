@@ -1,4 +1,6 @@
 # Proyecto Integrador
+- Fernando Majin Sampayo Perez
+- Cristian Daniel Valeriano Hernandez
 
 ## 1.1 Definición del problema: 
 - En Tulancingo hay muchas habitaciones que esperan a ser habitadas, la problemática llega cuando hay muchos estudiantes que no son del municipio de Tulancingo y quieren estudiar en las instituciones dentro del municipio, la mejor opción es rentar una habitación que cuente con lo indispensable para subsistir y se adapte a su economía. Un problema mucho más grande, es la inseguridad dentro del municipio, ya que con el tiempo se ha visto mucha delincuencia, este es un factor para que los estudiantes quieran rentar cerca de donde van a estudiar, ahorrarán tiempo, dinero y estarán un poco más seguros.
