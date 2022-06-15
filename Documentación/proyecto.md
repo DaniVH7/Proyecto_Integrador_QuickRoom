@@ -4,7 +4,8 @@
 ## Antecedentes
 En México se encuentran 763, 819 alumnos matriculados. 381, 735 son hombres. 382, 084 son mujeres.
 Mediante eso tomaremos un 10% de la poblacion universitaria en el estado de Hidalgo para tener un aproximado en este estudio.
-https://unate.org/educacion/cuantos-estudiantes-universitarios-hay-en-mexico.html
+
+- https://unate.org/educacion/cuantos-estudiantes-universitarios-hay-en-mexico.html
 ## 1.1 Definición del problema: 
 - La principal problemática llega cuando hay muchos estudiantes que no son del municipio de Tulancingo y quieren estudiar en las instituciones dentro del municipio, la mejor opción para ellos es rentar una habitación que cuente con agua, luz e internet, etc, y se adapte a su economía. Un problema mucho más grande, es la inseguridad dentro del municipio, ya que con el tiempo se ha visto mucha delincuencia, este es un factor para que los estudiantes quieran rentar cerca de donde van a estudiar, con esto evitariamos cualquier tipo de riesgo.
 
