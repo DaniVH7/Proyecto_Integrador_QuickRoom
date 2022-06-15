@@ -9,8 +9,29 @@
  - Es una aplicación que se enfoca a los estudiantes que no son del municipio de Tulancingo y estudian en las instituciones del municipio, la aplicación ayuda a buscar una habitación que cuente con lo necesaria para subsistir ajustandose a sus necesidades.
 
  ## 1.3 Definición de las funciones del proyecto:
-  - Las funciones que lleva la aplicación es que al ingresar nos pida un usuario y contraseña, en el inicio mostrara las habitaciones que  están disponibles, contara con apartados de seguridad, formas de pago, ayuda, en el apartado de seguridad tendra una opción en donde los padres de los estudiantes puedan monitorear a sus hijos,  ver o notificar si el estudiante cumple con los pagos de renta. La aplicación va a facilitar a los padres en saber sobre su comportamiento de sus hijos.
+  ## - Administrador
+| Numero | Funcion | 
+| ----------- | ----------- | 
+| 1.1 | Crear un registro nuevo
+| 1.2 | Iniciar sesion 
+| 1.3 | Tipo de Alojamiento
+| 1.4 | Descripcion del Alojamiento y Precio
+| 1.5 | Ubicacion donde se encuentra
+| 1.6 | Contenido dentro del Alojamineto
+| 1.7 | Que ofrece el espacio
+| 1.8 | Imagenes acerca de la Habitacion
+| 1.9 | Publicar
 
+## -Usuario
+|Numero | Funcion |
+|------------|--------------|
+| 1.1 | Crear un Registro nuevo
+| 1.2 | Iniciar sesion
+| 1.3 | Entrar al catalogo de alojamientos
+| 1.4 | Seleccionar su Habitacion
+| 1.5 | Comparar Precios
+| 1.6 | Apartar la Habitacion
+| 1.7 | Pago de Renta
  ## 1.4 Diseño de la base de datos (Diagrama entidad - relación)
  ![image](https://user-images.githubusercontent.com/97567256/173607602-111dba9a-1db8-437e-8bd5-9a271341615a.png)
 
