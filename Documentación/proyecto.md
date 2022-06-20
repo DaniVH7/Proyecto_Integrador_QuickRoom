@@ -3,7 +3,7 @@
 - Cristian Daniel Valeriano Hernandez
 ## Antecedentes
 En México se encuentran 763, 819 alumnos matriculados. 381, 735 son hombres. 382, 084 son mujeres.
-Mediante eso tomaremos un 10% de la poblacion universitaria en el estado de Hidalgo para tener un aproximado en este estudio.
+Mediante eso un 10% de la poblacion universitaria en el estado de Hidalgo para tener un aproximado en este estudio.
 
 - https://unate.org/educacion/cuantos-estudiantes-universitarios-hay-en-mexico.html
 ## 1.1 Definición del problema: 
