@@ -2,10 +2,11 @@
 - Fernando Majin Sampayo Perez
 - Cristian Daniel Valeriano Hernandez
 ## Antecedentes
-En México se encuentran 763, 819 alumnos matriculados. 381, 735 son hombres. 382, 084 son mujeres.
-Mediante eso un 10% de la poblacion universitaria en el estado de Hidalgo para tener un aproximado en este estudio.
+México tiene una población estimada de 125 millones de habitantes, de los cuales 37.766.217 son estudiantes. Del total de la población, 12.576.736 de personas se encuentran entre los 18 y 23 años, lo que se puede considerar como el mercado potencial de la educación superior en México.En Hidalgo, en el ciclo escolar 2015-2016 está en el lugar 16 de matrícula de educación superior del país con un total de 97,429 alumnos que incluye licenciatura y posgrado, lo equivale al 2.3% del total nacional.
+Dentro de la universidad Tecnologica de Tulancingo hay un aproximado de 3000 matriculados los cuales un 20% son estudiantes que no radican en el municipio de Tulancingo.
 
-- https://unate.org/educacion/cuantos-estudiantes-universitarios-hay-en-mexico.html
+-https://unate.org/admision/cuantos-estudiantes-hay-en-mexico-inegi.html
+
 ## 1.1 Definición del problema: 
 - La principal problemática llega cuando hay muchos estudiantes que no son del municipio de Tulancingo y quieren estudiar en las instituciones dentro del municipio, la mejor opción para ellos es rentar una habitación que cuente con agua, luz e internet, etc, y se adapte a su economía. Un problema mucho más grande, es la inseguridad dentro del municipio, ya que con el tiempo se ha visto mucha delincuencia, este es un factor para que los estudiantes quieran rentar cerca de donde van a estudiar, con esto evitariamos cualquier tipo de riesgo.
 
