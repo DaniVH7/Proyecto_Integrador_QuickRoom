@@ -4,7 +4,7 @@
 ## Antecedentes
 México tiene una población estimada de 125 millones de habitantes, de los cuales 37.766.217 son estudiantes. Del total de la población, 12.576.736 de personas se encuentran entre los 18 y 23 años, lo que se puede considerar como el mercado potencial de la educación superior en México.
 En Hidalgo, en el ciclo escolar 2015-2016 está en el lugar 16 de matrícula de educación superior del país con un total de 97,429 alumnos que incluye licenciatura y posgrado, lo equivale al 2.3% del total nacional.
-Dentro de la universidad Tecnologica de Tulancingo hay un aproximado de 3000 matriculados los cuales un 20% son estudiantes que no radican en el municipio de Tulancingo. La mayor cantidad de alumnos matriculados en la Universidad provienen de Hidalgo, Ciudad de Mexico y Puebla.
+Dentro de la universidad Tecnologica de Tulancingo hay un aproximado de 2942, 1162 son  de tulancingo, 1140 son de otros municipios del Estado y 640 de otros Estados y del extranjero.
 
 -https://unate.org/admision/cuantos-estudiantes-hay-en-mexico-inegi.html
 
