@@ -9,10 +9,17 @@ Dentro de la universidad Tecnologica de Tulancingo hay un aproximado de 2942, 11
 -https://unate.org/admision/cuantos-estudiantes-hay-en-mexico-inegi.html
 
 ## 1.1 Definición del problema: 
-- La principal problemática llega cuando hay muchos estudiantes que no son del municipio de Tulancingo y quieren estudiar en las instituciones dentro del municipio, la mejor opción para ellos es rentar una habitación que cuente con agua, luz e internet, etc, y se adapte a su economía. Un problema mucho más grande, es la inseguridad dentro del municipio, ya que con el tiempo se ha visto mucha delincuencia, este es un factor para que los estudiantes quieran rentar cerca de donde van a estudiar, con esto evitariamos cualquier tipo de riesgo.
+•	La principal problemática llega cuando hay muchos estudiantes que no son del municipio de Tulancingo y quieren estudiar en las instituciones dentro del municipio, la mejor opción para ellos es alquilar una habitación que cuenta con una habitación amueblada, agua, luz e internet, etc, y se adapta a su economía e interese .
+ Los estudiantes recurren a rentar una habitación ya que no hay transportes a horas muy tempranas del día, y los que hay no llegan a la hora adecuada para iniciar sus clases diarias, la cuestión es de que si se te pasa el transporte habitual tienes que esperar una hora o mas para que vuelva a pasar.
+ 	El desgaste que tienen los estudiantes al viajar diario es muy grande, ya que se levantan muy temprano para poder tomar su transporte y de regreso a casa llegan se demoran para llegar por que no conocen los horarios del transporte. Además del costo que tiene el transporte, es muy caro y pagas durante 7 días, por ejemplo el precio del transporte va de 40 a 50 pesos más el transporte de la central de autobuses a casa, vendrían siendo de 1100 a 1300 pesos semanalmente. 
+	En la universidad hay estudiantes que no son del estado de Hidalgo y viven con algún familiar que radica en el estado de Tulancingo, les facilita un poco la solvencia de rentar un cuarto, pero no es lo mismo vivir con un familiar que conoces o haz visto muy pocas veces.
+	 Un problema mucho más grande, es la inseguridad dentro del municipio, ya que con el tiempo se ha visto mucha delincuencia, este es un factor para que los estudiantes quieran alquilar cerca de donde van a estudiar, con esto evitaríamos cualquier tipo de riesgo.
 
-## 1.2 Definición del proyecto:
- - Es una aplicación que se enfoca a los estudiantes que no son del municipio de Tulancingo y estudian en las instituciones del municipio, la aplicación ayuda a buscar una habitación que cuente con lo necesaria para subsistir ajustandose a sus necesidades.
+## 	1.2 Definición del proyecto: 
+Es una aplicación que se enfoca a los estudiantes que no son del municipio de Tulancingo y estudian en las instituciones del municipio, la aplicación ayuda a buscar una habitación que cuente con lo necesario para subsistir ajustándose a sus necesidades y al capital con el que cuentan.
+Dentro de esto definimos el proyecto en donde se resolverán todas las necesidades de los estudiantes que no son de el municipio de Tulancingo.
+•	Para empezar  Es una aplicación que se enfoca a los estudiantes que no son del municipio de Tulancingo y estudian en las instituciones del municipio, la aplicación ayuda a buscar una habitación que cuente con lo necesario para subsistir ajustandose a sus necesidades.
+
 
  ## 1.3 Definición de las funciones del proyecto:
   ## - Administrador
