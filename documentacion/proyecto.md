@@ -186,11 +186,11 @@ create table cuartos(
 - ..\Downloads\admin.csv
 - ..\Downloads\cuartos.csv
 
-| Campo | 
+| Pregunta | 
 | ----------- |
-| Tipo |
+| Consulta |
 |-------------|
-| Tamaño |
+| Resultado |
 |-------------|
 
 
