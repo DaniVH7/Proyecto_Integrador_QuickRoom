@@ -186,7 +186,8 @@ create table cuartos(
 - ..\Downloads\admin.csv
 - ..\Downloads\cuartos.csv
 
-| Pregunta | 
+| Pregunta:
+| 
 | ----------- |
 | Consulta |
 |-------------|
