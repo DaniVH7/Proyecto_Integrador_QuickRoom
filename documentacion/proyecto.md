@@ -186,4 +186,11 @@ create table cuartos(
 - ..\Downloads\admin.csv
 - ..\Downloads\cuartos.csv
 
+| Campo | 
+| ----------- |
+| Tipo |
+|-------------|
+| Tamaño |
+|-------------|
+
 
