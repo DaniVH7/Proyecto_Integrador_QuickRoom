@@ -136,7 +136,11 @@ PRAGMA foreign_key = ON;
 drop table cuartos;
 create table cuartos(
   precio varchar(12),
+  amueblado varchar(10) check(amueblado ='si' or amueblado='no'),
+  servicios varchar(250) check(servicios='si' or servicios='no'),
+  compartido varchar(10) check(compartido='si' or compartido='no'),
   tiempo_renta varchar(50),
+  calificacion varchar(50),
   cid integer primary key AUTOINCREMENT,
   descripcion varchar(500),
   aid  integer not null REFERENCES admin(aid),
