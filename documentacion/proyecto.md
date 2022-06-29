@@ -98,7 +98,7 @@ CREATE TABLE condominios(
   idcondominio integer primary key AUTOINCREMENT,
   descripcion varchar(200),
   total_habitaciones int,
-  color varchar(50)
+  color varchar(50),
   direccion varchar(200)
  );
  ~~~
@@ -135,7 +135,8 @@ create table direccion(
 PRAGMA foreign_key = ON;
 drop table cuartos;
 create table cuartos(
-  precio varchar(12) 
+  precio varchar(12),
+  tiempo_renta varchar(50),
   cid integer primary key AUTOINCREMENT,
   descripcion varchar(500),
   aid  integer not null REFERENCES admin(aid),
