@@ -89,6 +89,20 @@ CREATE TABLE admin(
   status varchar(50) check(status='activo' or status='inactivo')
 );
 ~~~
+### Tabla Condominios
+~~~SQL
+.headers on 
+.mode column
+Pragma foreign_key = ON;
+CREATE TABLE condominios(
+  idcondominio integer primary key AUTOINCREMENT,
+  descripcion varchar(200),
+  total_habitaciones int,
+  color varchar(50)
+  direccion varchar(200)
+ );
+ ~~~
+  
 ### Tabla Provedor
 ~~~SQl
 .headers on
@@ -121,6 +135,7 @@ create table direccion(
 PRAGMA foreign_key = ON;
 drop table cuartos;
 create table cuartos(
+  precio varchar(12) 
   cid integer primary key AUTOINCREMENT,
   descripcion varchar(500),
   aid  integer not null REFERENCES admin(aid),
