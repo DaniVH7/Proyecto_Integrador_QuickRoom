@@ -50,8 +50,10 @@ Dentro de esto definimos el proyecto en donde se resolverán todas las necesidad
 
 
   ## 1.5 Creación de la base de datos (Script)
+ ~~~sql
  CREATE DATABASE QUICKROOM;  
 USE QUICKROOM;
+~~~
 ## Tabla Usuarios
 ~~~sql
   create table if not exists usuarios(
