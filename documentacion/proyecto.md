@@ -141,7 +141,8 @@ nombre varchar(50),
 apellido_m varchar(50),
 apellido_p varchar(50),
 email varchar(50),
-telefono INTEGER NO NULL
+telefono INTEGER NO NULL,
+contraseña  varchar(50)
 );
 ~~~
 
