@@ -52,8 +52,11 @@ Dentro de esto definimos el proyecto en donde se resolverán todas las necesidad
 
   ## 1.5 Creación de la base de datos (Script)
   CREATE DATABASE QUICKROOM;
+  
 USE QUICKROOM;
+
 #--Tabla Usuarios--
+
 create table if not exists usuarios(
   id_user integer primary key AUTO_INCREMENT NOT NULL,
   nombre varchar(250),
@@ -69,6 +72,7 @@ create table if not exists usuarios(
 CREATE UNIQUE INDEX index_emai ON usuarios(email);
 
 #--Tabla Administradores--
+
 CREATE TABLE administradores(
   id_admin integer primary key AUTO_INCREMENT,
   nombre varchar(250),
@@ -79,6 +83,7 @@ CREATE TABLE administradores(
 );
 
 #--Tabla de Proveedores--
+
 create table proveedores(
   id_prov integer primary key AUTO_INCREMENT,
   nombreprov varchar(260),
@@ -89,6 +94,7 @@ create table proveedores(
 CREATE UNIQUE INDEX index_proveedor_email ON proveedores(nombreprov,email);
 
 #--Tabla de Condominios--
+
 CREATE TABLE condominios(
   id_condominio integer primary key AUTO_INCREMENT,
   descripcion varchar(200),
@@ -101,6 +107,7 @@ CREATE TABLE condominios(
  );
  
 #--Tabla de Cuartos--
+
 create table cuartos(
   id_cuarto integer primary key AUTO_INCREMENT,
   precio varchar(12),
