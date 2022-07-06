@@ -55,7 +55,7 @@ Dentro de esto definimos el proyecto en donde se resolverán todas las necesidad
   
 USE QUICKROOM;
 
-#--Tabla Usuarios--
+##--Tabla Usuarios--
 
 create table if not exists usuarios(
   id_user integer primary key AUTO_INCREMENT NOT NULL,
@@ -71,7 +71,7 @@ create table if not exists usuarios(
 
 CREATE UNIQUE INDEX index_emai ON usuarios(email);
 
-#--Tabla Administradores--
+##--Tabla Administradores--
 
 CREATE TABLE administradores(
   id_admin integer primary key AUTO_INCREMENT,
@@ -79,10 +79,11 @@ CREATE TABLE administradores(
   apellidop varchar(250),
   apellidom varchar(250),
   status varchar(50) check(status='activo' or status='inactivo'),
-  id_prov integer references proveedores(id_prov)
+  id_prov integer references proveedores(id_prov),
+  id_padre integer REFERENCES padres(id_padre)
 );
 
-#--Tabla de Proveedores--
+##--Tabla de Proveedores--
 
 create table proveedores(
   id_prov integer primary key AUTO_INCREMENT,
@@ -93,7 +94,7 @@ create table proveedores(
 );
 CREATE UNIQUE INDEX index_proveedor_email ON proveedores(nombreprov,email);
 
-#--Tabla de Condominios--
+##--Tabla de Condominios--
 
 CREATE TABLE condominios(
   id_condominio integer primary key AUTO_INCREMENT,
@@ -106,7 +107,7 @@ CREATE TABLE condominios(
   id_cuarto integer references cuartos(id_cuarto)
  );
  
-#--Tabla de Cuartos--
+##--Tabla de Cuartos--
 
 create table cuartos(
   id_cuarto integer primary key AUTO_INCREMENT,
@@ -121,7 +122,7 @@ create table cuartos(
   id_user integer not null REFERENCES usuario(id_user)
 );
 
-#Tabla de Direcciones
+##Tabla de Direcciones
 create table direcciones(
     id_direccion INTEGER PRIMARY KEY AUTO_INCREMENT NOT NULL,
     estado varchar(250),
@@ -131,6 +132,17 @@ create table direcciones(
     codigo_postal INTEGER NOT NULL,
     id_condominio integer not null references condominios(id_condominio)
 );
+
+##Tabla Padres
+create table padres(
+id_padre INTEGER PRIMARY KEY AUTO_INCREMENT NOT NULL,
+nombre varchar(50),
+apellido_m varchar(50),
+apellido_p varchar(50),
+email varchar(50),
+telefono INTEGER NO NULL
+);
+
 
 ~~~
 # 1.6 Diccionario de datos
