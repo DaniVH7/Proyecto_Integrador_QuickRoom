@@ -52,8 +52,8 @@ Dentro de esto definimos el proyecto en donde se resolverán todas las necesidad
   ## 1.5 Creación de la base de datos (Script)
  CREATE DATABASE QUICKROOM;  
 USE QUICKROOM;
-'''sql
 ## Tabla Usuarios
+~~~sql
   create table if not exists usuarios(
   id_user integer primary key AUTO_INCREMENT NOT NULL,
   nombre varchar(250),
@@ -65,10 +65,10 @@ USE QUICKROOM;
   telefono integer not null,
   status varchar(50) check (status='Activo' or status='Inactivo')
 );
-'''sql
 CREATE UNIQUE INDEX index_emai ON usuarios(email);
-
+~~~sql
 ## --Tabla Administradores--
+~~~sql
 CREATE TABLE administradores(
   id_admin integer primary key AUTO_INCREMENT,
   nombre varchar(250),
@@ -78,9 +78,9 @@ CREATE TABLE administradores(
   id_prov integer references proveedores(id_prov),
   id_padre integer REFERENCES padres(id_padre)
 );
-
+~~~sql
 ## --Tabla de Proveedores--
-~~sql
+~~~sql
 create table proveedores(
   id_prov integer primary key AUTO_INCREMENT,
   nombreprov varchar(260),
@@ -88,11 +88,11 @@ create table proveedores(
   telefono integer not null,
   id_direccion integer not null references direccion(idD)
 );
-~~
+~~~sql
 CREATE UNIQUE INDEX index_proveedor_email ON proveedores(nombreprov,email);
 
 ## --Tabla de Condominios--
-~~sql
+~~~sql
 CREATE TABLE condominios(
   id_condominio integer primary key AUTO_INCREMENT,
   descripcion varchar(200),
@@ -103,9 +103,9 @@ CREATE TABLE condominios(
   id_admin integer references admin(id_admin),
   id_cuarto integer references cuartos(id_cuarto)
  );
- ~~sql
+ ~~~sql
 ## --Tabla de Cuartos--
-~~sql
+~~~sql
 create table cuartos(
   id_cuarto integer primary key AUTO_INCREMENT,
   precio varchar(12),
@@ -118,9 +118,9 @@ create table cuartos(
   id_admi  integer not null REFERENCES admin(id_admin),
   id_user integer not null REFERENCES usuario(id_user)
 );
-~~
+~~~sql
 ## Tabla de Direcciones
-~~sql
+~~~sql
 create table direcciones(
     id_direccion INTEGER PRIMARY KEY AUTO_INCREMENT NOT NULL,
     estado varchar(250),
@@ -130,9 +130,9 @@ create table direcciones(
     codigo_postal INTEGER NOT NULL,
     id_condominio integer not null references condominios(id_condominio)
 );
-~~
+~~~sql
 ## Tabla Padres
-~SQL
+~~~sql
 create table padres(
 id_padre INTEGER PRIMARY KEY AUTO_INCREMENT NOT NULL,
 nombre varchar(50),
@@ -141,7 +141,7 @@ apellido_p varchar(50),
 email varchar(50),
 telefono INTEGER NO NULL
 );
-~SQL
+~~~sql
 
 # 1.6 Diccionario de datos
 ## - Usuarios
