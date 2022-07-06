@@ -48,13 +48,11 @@ Dentro de esto definimos el proyecto en donde se resolverán todas las necesidad
  ## 1.4 Diseño de la base de datos (Diagrama entidad - relación)
  ![image](https://user-images.githubusercontent.com/97567256/173607602-111dba9a-1db8-437e-8bd5-9a271341615a.png)
 
-
-
+~sql
   ## 1.5 Creación de la base de datos (Script)
  CREATE DATABASE QUICKROOM;  
 USE QUICKROOM;
 ## Tabla Usuarios
-~~ SQL
   create table if not exists usuarios(
   id_user integer primary key AUTO_INCREMENT NOT NULL,
   nombre varchar(250),
@@ -66,8 +64,7 @@ USE QUICKROOM;
   telefono integer not null,
   status varchar(50) check (status='Activo' or status='Inactivo')
 );
-~~ SQL
-
+~sql
 CREATE UNIQUE INDEX index_emai ON usuarios(email);
 
 ## --Tabla Administradores--
