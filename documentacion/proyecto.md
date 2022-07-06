@@ -51,14 +51,11 @@ Dentro de esto definimos el proyecto en donde se resolverán todas las necesidad
 
 
   ## 1.5 Creación de la base de datos (Script)
-  ### Tabla Usuarios
-  ~~~ SQl
-.headers on
-.mode column
-PRAGMA foreign_key = ON
-drop table Usuarios;
+  CREATE DATABASE QUICKROOM;
+USE QUICKROOM;
+#--Tabla Usuarios--
 create table if not exists usuarios(
-  uid integer primary key AUTOINCREMENT NOT NULL,
+  id_user integer primary key AUTO_INCREMENT NOT NULL,
   nombre varchar(250),
   apellidop varchar(250),
   apellidom varchar(250),
@@ -71,81 +68,63 @@ create table if not exists usuarios(
 
 CREATE UNIQUE INDEX index_emai ON usuarios(email);
 
-insert into usuarios values(null,'juan','perez','lopez','19','lopez@email.com','102987362hei3j','771392802','Activo');
-insert into usuarios values(null,'miguel','kkkk','skkk','20','lopez@email.com','bsbbutwygbxsuy','771338802','Activo');
-~~~
-### Tabla de Administrador
-~~~SQl
-.headers on
-.mode column
-PRAGMA foreign_key = ON; 
-CREATE TABLE admin(
-  aid integer primary key AUTOINCREMENT,
+#--Tabla Administradores--
+CREATE TABLE administradores(
+  id_admin integer primary key AUTO_INCREMENT,
   nombre varchar(250),
   apellidop varchar(250),
   apellidom varchar(250),
-  email varchar(250),
-  password varchar(32),
-  status varchar(50) check(status='activo' or status='inactivo')
+  status varchar(50) check(status='activo' or status='inactivo'),
+  id_prov integer references proveedores(id_prov)
 );
-~~~
-### Tabla Condominios
-~~~SQL
-.headers on 
-.mode column
-Pragma foreign_key = ON;
+
+#--Tabla de Proveedores--
+create table proveedores(
+  id_prov integer primary key AUTO_INCREMENT,
+  nombreprov varchar(260),
+  email varchar(350),
+  telefono integer not null,
+  id_direccion integer not null references direccion(idD)
+);
+CREATE UNIQUE INDEX index_proveedor_email ON proveedores(nombreprov,email);
+
+#--Tabla de Condominios--
 CREATE TABLE condominios(
-  idcondominio integer primary key AUTOINCREMENT,
+  id_condominio integer primary key AUTO_INCREMENT,
   descripcion varchar(200),
   total_habitaciones int,
   color varchar(50),
-  direccion varchar(200)
+  direccion varchar(200),
+  id_direccion integer references direcciones(id_direccion),
+  id_admin integer references admin(id_admin),
+  id_cuarto integer references cuartos(id_cuarto)
  );
- ~~~
-  
-### Tabla Provedor
-~~~SQl
-.headers on
-.mode column
-PRAGMA foreign_key = ON
-create table proveedor(
-  idprov integer primary key AUTOINCREMENT,
-  nombreprov varchar(260),
-  email varchar(350),
-  telefono int
-  idD INTEGER NOT NULL REFERENCES  direccion(idD)
-);
-CREATE UNIQUE INDEX index_proveedor_email ON proveedor(nombreprov,email);
-~~~
-### Tabla direccion
-~~~SQL
-create table direccion(
-    idD INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
-    estado varchar(250),
-    municipio varchar(250),
-    colonia varchar(250),
-    calle varchar(250),
-    codigo_postal INTEGER NOT NULL
-);
-~~~
-### Tabla Cuartos
-~~~SQL
-.headers on
-.mode column
-PRAGMA foreign_key = ON;
-drop table cuartos;
+ 
+#--Tabla de Cuartos--
 create table cuartos(
+  id_cuarto integer primary key AUTO_INCREMENT,
   precio varchar(12),
   amueblado varchar(10) check(amueblado ='si' or amueblado='no'),
   servicios varchar(250) check(servicios='si' or servicios='no'),
   compartido varchar(10) check(compartido='si' or compartido='no'),
   tiempo_renta varchar(50),
   calificacion varchar(50),
-  cid integer primary key AUTOINCREMENT,
   descripcion varchar(500),
-  aid  integer not null REFERENCES admin(aid),
-  idprov integer  not null REFERENCES proveedor(idprov)
+  id_admi  integer not null REFERENCES admin(id_admin),
+  id_user integer not null REFERENCES usuario(id_user)
 );
+
+#Tabla de Direcciones
+create table direcciones(
+    id_direccion INTEGER PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    estado varchar(250),
+    municipio varchar(250),
+    colonia varchar(250),
+    calle varchar(250),
+    codigo_postal INTEGER NOT NULL,
+    id_condominio integer not null references condominios(id_condominio)
+);
+
 ~~~
 # 1.6 Diccionario de datos
 ## - Usuarios
