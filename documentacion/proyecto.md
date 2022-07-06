@@ -66,7 +66,7 @@ USE QUICKROOM;
   status varchar(50) check (status='Activo' or status='Inactivo')
 );
 CREATE UNIQUE INDEX index_emai ON usuarios(email);
-~~~sql
+~~~
 ## --Tabla Administradores--
 ~~~sql
 CREATE TABLE administradores(
@@ -78,7 +78,7 @@ CREATE TABLE administradores(
   id_prov integer references proveedores(id_prov),
   id_padre integer REFERENCES padres(id_padre)
 );
-~~~sql
+~~~
 ## --Tabla de Proveedores--
 ~~~sql
 create table proveedores(
@@ -88,9 +88,9 @@ create table proveedores(
   telefono integer not null,
   id_direccion integer not null references direccion(idD)
 );
-~~~sql
-CREATE UNIQUE INDEX index_proveedor_email ON proveedores(nombreprov,email);
 
+CREATE UNIQUE INDEX index_proveedor_email ON proveedores(nombreprov,email);
+~~~
 ## --Tabla de Condominios--
 ~~~sql
 CREATE TABLE condominios(
@@ -103,7 +103,7 @@ CREATE TABLE condominios(
   id_admin integer references admin(id_admin),
   id_cuarto integer references cuartos(id_cuarto)
  );
- ~~~sql
+ ~~~
 ## --Tabla de Cuartos--
 ~~~sql
 create table cuartos(
@@ -118,7 +118,7 @@ create table cuartos(
   id_admi  integer not null REFERENCES admin(id_admin),
   id_user integer not null REFERENCES usuario(id_user)
 );
-~~~sql
+~~~
 ## Tabla de Direcciones
 ~~~sql
 create table direcciones(
@@ -130,7 +130,7 @@ create table direcciones(
     codigo_postal INTEGER NOT NULL,
     id_condominio integer not null references condominios(id_condominio)
 );
-~~~sql
+~~~
 ## Tabla Padres
 ~~~sql
 create table padres(
@@ -141,7 +141,7 @@ apellido_p varchar(50),
 email varchar(50),
 telefono INTEGER NO NULL
 );
-~~~sql
+~~~
 
 # 1.6 Diccionario de datos
 ## - Usuarios
