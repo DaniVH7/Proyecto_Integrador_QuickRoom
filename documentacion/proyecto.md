@@ -70,8 +70,7 @@ USE QUICKROOM;
 
 CREATE UNIQUE INDEX index_emai ON usuarios(email);
 
-##--Tabla Administradores--
-~~sql
+## --Tabla Administradores--
 CREATE TABLE administradores(
   id_admin integer primary key AUTO_INCREMENT,
   nombre varchar(250),
@@ -81,8 +80,8 @@ CREATE TABLE administradores(
   id_prov integer references proveedores(id_prov),
   id_padre integer REFERENCES padres(id_padre)
 );
-~~
-##--Tabla de Proveedores--
+
+## --Tabla de Proveedores--
 ~~sql
 create table proveedores(
   id_prov integer primary key AUTO_INCREMENT,
@@ -94,7 +93,7 @@ create table proveedores(
 ~~
 CREATE UNIQUE INDEX index_proveedor_email ON proveedores(nombreprov,email);
 
-##--Tabla de Condominios--
+## --Tabla de Condominios--
 ~~sql
 CREATE TABLE condominios(
   id_condominio integer primary key AUTO_INCREMENT,
@@ -107,7 +106,7 @@ CREATE TABLE condominios(
   id_cuarto integer references cuartos(id_cuarto)
  );
  ~~sql
-##--Tabla de Cuartos--
+## --Tabla de Cuartos--
 ~~sql
 create table cuartos(
   id_cuarto integer primary key AUTO_INCREMENT,
@@ -122,7 +121,7 @@ create table cuartos(
   id_user integer not null REFERENCES usuario(id_user)
 );
 ~~
-##Tabla de Direcciones
+## Tabla de Direcciones
 ~~sql
 create table direcciones(
     id_direccion INTEGER PRIMARY KEY AUTO_INCREMENT NOT NULL,
@@ -134,8 +133,8 @@ create table direcciones(
     id_condominio integer not null references condominios(id_condominio)
 );
 ~~
-##Tabla Padres
-~~sql
+## Tabla Padres
+~SQL
 create table padres(
 id_padre INTEGER PRIMARY KEY AUTO_INCREMENT NOT NULL,
 nombre varchar(50),
@@ -144,10 +143,8 @@ apellido_p varchar(50),
 email varchar(50),
 telefono INTEGER NO NULL
 );
-~~
+~SQL
 
-
-~~~
 # 1.6 Diccionario de datos
 ## - Usuarios
 | Campo | Tipo | Tamaño | Descripcion |
