@@ -7,9 +7,6 @@ En Hidalgo, en el ciclo escolar 2015-2016 está en el lugar 16 de matrícula de 
 Dentro de la universidad Tecnologica de Tulancingo hay un aproximado de 2942, 1162 son  de tulancingo, 1140 son de otros municipios del Estado y 640 de otros Estados y del extranjero.
 
 
--![image](https://user-images.githubusercontent.com/102370094/177998124-5dff0c79-d660-4a67-8253-3907b652f911.png)
-
-
 
 ## 1.1 Definición del problema: 
 •	La principal problemática llega cuando hay muchos estudiantes que no son del municipio de Tulancingo y quieren estudiar en las instituciones dentro del municipio, la mejor opción para ellos es alquilar una habitación que cuenta con una habitación amueblada, agua, luz e internet, etc, y se adapta a su economía e interese .
@@ -49,7 +46,8 @@ Dentro de esto definimos el proyecto en donde se resolverán todas las necesidad
 | 1.6 | Apartar la Habitacion
 | 1.7 | Pago de Renta
  ## 1.4 Diseño de la base de datos (Diagrama entidad - relación)
- ![image](https://user-images.githubusercontent.com/97567256/173607602-111dba9a-1db8-437e-8bd5-9a271341615a.png)
+ ![image](https://user-images.githubusercontent.com/102370094/177998320-0659ea63-25bf-4e70-8c50-b3570e561fae.png)
+
 
 
   ## 1.5 Creación de la base de datos (Script)
