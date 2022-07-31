@@ -78,7 +78,7 @@ CREATE UNIQUE INDEX index_emai ON estudiantes(email);
 ~~~
 ## --Tabla Administradores--
 ~~~sql
-CREATE TABLE `administradores(
+CREATE TABLE administradores(
   id_administrador int  PRIMARY KEY AUTOINCREMENT NOT NULL,
   nombre varchar(250) , 
   apellidop varchar(250) ,
