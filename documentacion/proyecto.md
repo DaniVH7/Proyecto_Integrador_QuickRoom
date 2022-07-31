@@ -58,95 +58,84 @@ Dentro de esto definimos el proyecto en donde se resolverán todas las necesidad
  CREATE DATABASE QUICKROOM;  
 USE QUICKROOM;
 ~~~
-## Tabla Usuarios
+## Tabla Estudiantes
 ~~~sql
-  create table if not exists usuarios(
-  id_user integer primary key AUTO_INCREMENT NOT NULL,
+CREATE TABLE estudiantes(
+  id_estudiante int PRIMARY KEY AUTOINCREMENT NOT NULL,
   nombre varchar(250),
   apellidop varchar(250),
   apellidom varchar(250),
-  edad integer,
-  email varchar(250),
-  password varchar(32),
-  telefono integer not null,
-  status varchar(50) check (status='Activo' or status='Inactivo')
+  fecha date,
+  usuario varchar(250),
+  correo varchar(250),
+  contra varchar(250),
+  telefono varchar(10),
+  estatus varchar(250) CHECK (`estatus` = 'Activo' or `estatus` = 'Inactivo'),
+  id_padre int references padres(id_padre)
 );
-CREATE UNIQUE INDEX index_emai ON usuarios(email);
+ 
+CREATE UNIQUE INDEX index_emai ON estudiantes(email);
 ~~~
 ## --Tabla Administradores--
 ~~~sql
-CREATE TABLE administradores(
-  id_admin integer primary key AUTO_INCREMENT,
-  nombre varchar(250),
-  apellidop varchar(250),
-  apellidom varchar(250),
-  status varchar(50) check(status='activo' or status='inactivo'),
-  id_prov integer references proveedores(id_prov),
-  id_padre integer REFERENCES padres(id_padre)
+CREATE TABLE `administradores(
+  id_administrador int  PRIMARY KEY AUTOINCREMENT NOT NULL,
+  nombre varchar(250) , 
+  apellidop varchar(250) ,
+  apellidom varchar(250) ,
+  telefono varchar(10) ,
+  usuario varchar(250) ,
+  correo varchar(250) ,
+  contra varchar(32) 
 );
 ~~~
-## --Tabla de Proveedores--
-~~~sql
-create table proveedores(
-  id_prov integer primary key AUTO_INCREMENT,
-  nombreprov varchar(260),
-  email varchar(350),
-  telefono integer not null,
-  id_direccion integer not null references direccion(idD)
-);
 
-CREATE UNIQUE INDEX index_proveedor_email ON proveedores(nombreprov,email);
-~~~
-## --Tabla de Condominios--
-~~~sql
-CREATE TABLE condominios(
-  id_condominio integer primary key AUTO_INCREMENT,
-  descripcion varchar(200),
-  total_habitaciones int,
-  color varchar(50),
-  direccion varchar(200),
-  id_direccion integer references direcciones(id_direccion),
-  id_admin integer references admin(id_admin),
-  id_cuarto integer references cuartos(id_cuarto)
- );
- ~~~
 ## --Tabla de Cuartos--
 ~~~sql
-create table cuartos(
-  id_cuarto integer primary key AUTO_INCREMENT,
+CREATE TABLE cuartos(
+  id_cuarto int PRIMARY KEY AUTOINCREMENT NOT NULL,
   precio varchar(12),
-  amueblado varchar(10) check(amueblado ='si' or amueblado='no'),
-  servicios varchar(250) check(servicios='si' or servicios='no'),
-  compartido varchar(10) check(compartido='si' or compartido='no'),
-  tiempo_renta varchar(50),
-  calificacion varchar(50),
-  descripcion varchar(500),
-  id_admi  integer not null REFERENCES admin(id_admin),
-  id_user integer not null REFERENCES usuario(id_user)
+  amueblado varchar(10)  CHECK (`amueblado` = 'si' or `amueblado` = 'no'),
+  agua varchar(250)  CHECK (`agua` = 'si' or `agua` = 'no'),
+  luz varchar(250)  CHECK (`luz` = 'si' or `luz` = 'no'),
+  internet varchar(250) CHECK (`internet` = 'si' or `internet` = 'no'),
+  vigilancia varchar(250)  CHECK (`vigilancia` = 'si' or `vigilancia` = 'no'),
+  cocina varchar(250) CHECK (`cocina` = 'si' or `cocina` = 'no'),
+  baño_compartido varchar(250) CHECK (`baño_compartido` = 'si' or `baño_compartido` = 'no'),
+  cuarto_compartido varchar(10)  CHECK (`cuarto_compartido` = 'si' or `cuarto_compartido` = 'no'),
+  tiempo_renta varchar(50) ,
+  tipo_condominio varchar(250)  CHECK (`tipo_condominio` = 'casa' or `tipo_condominio` = 'edificio'),
+  calle varchar(250),
+  estado varchar(250) 
+  municipio varchar(250),
+  geomapa varchar(250),
+  fotografias` varchar(250) 
 );
 ~~~
-## Tabla de Direcciones
-~~~sql
-create table direcciones(
-    id_direccion INTEGER PRIMARY KEY AUTO_INCREMENT NOT NULL,
-    estado varchar(250),
-    municipio varchar(250),
-    colonia varchar(250),
-    calle varchar(250),
-    codigo_postal INTEGER NOT NULL,
-    id_condominio integer not null references condominios(id_condominio)
-);
-~~~
+
 ## Tabla Padres
 ~~~sql
-create table padres(
-id_padre INTEGER PRIMARY KEY AUTO_INCREMENT NOT NULL,
-nombre varchar(50),
-apellido_m varchar(50),
-apellido_p varchar(50),
-email varchar(50),
-telefono INTEGER NO NULL,
-contraseña  varchar(50)
+CREATE TABLE padres(
+  id_padre int PRIMARY KEY AUTOINCREMENT NOT NULL,
+  nombre varchar(250) ,
+  apellidop varchar(250) ,
+  apellidom varchar(250) ,
+  usuario varchar(250) ,
+  correo varchar(250) ,
+  contra varchar(32) ,
+  telefono varchar(10) 
+);
+~~~
+
+## Tabla rentas
+~~~sql
+CREATE TABLE rentas(
+  id_renta int PRIMARY KEY AUTOINCREMENTNOT NULL,
+  id_administrador int references administradores(id_administrador),
+  id_estudiante int references estudiantes(id_estudiante),
+  id_cuarto int references cuartos(id_cuarto),
+  fecha date ,
+  tiempo_de_renta varchar(250) 
 );
 ~~~
 
