@@ -48,7 +48,8 @@ Dentro de esto definimos el proyecto en donde se resolverán todas las necesidad
 | 1.6 | Apartar la Habitacion
 | 1.7 | Pago de Renta
  ## 1.4 Diseño de la base de datos (Diagrama entidad - relación)
- ![Uploading image.png…]()
+ ![image](https://user-images.githubusercontent.com/102370094/182036566-b9cd5fcd-cd81-4709-b716-638b3d59670b.png)
+
 
 
 
