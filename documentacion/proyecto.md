@@ -396,6 +396,35 @@ Que cuartos estan amueblados
 ~~~sql
 SELECT id_cuarto, amueblado, fotografias FROM cuartos where amueblado='$amueblado';
 ~~~
-
-
-
+Que cuartos tienen baño compartido
+~~~sql
+ SELECT id_cuarto,baño_compartido, fotografias FROM cuartos where baño_compartido='$baño';
+~~~
+Que cuartos tienen cocina
+~~~sql
+SELECT id_cuarto,Cocina, fotografias FROM cuartos where cocina='$cocina';
+~~~
+Que cuartos son compartidos
+~~~sql
+"SELECT id_cuarto,cuarto_compartido, fotografias FROM cuartos where cuarto_compartido='$cuarto'";
+~~~
+Que cuartos cuentan con internet
+~~~sql
+"SELECT id_Cuarto,internet, fotografias FROM cuartos where internet='$internet'";
+~~~
+Que cuartos cuentan con luz
+~~~sql
+"SELECT id_cuarto,luz, fotografias FROM cuartos where luz='$luz'";
+~~~
+Que cuartos tienen un precio con un rango fijo
+~~~sql
+ "SELECT id_cuarto,precio, fotografias FROM cuartos where precio ='$precio'";
+ ~~~
+ Tiempo en el que se renta el cuarto
+ ~~~sql
+ "SELECT id_cuarto,tiempo_renta, fotografias FROM cuartos where tiempo_renta='$renta'";
+ ~~~
+ Que cuartos cuentan con vigilancia
+ ~~~sql
+ "SELECT id_Cuarto,vigilancia, fotografias FROM cuartos where vigilancia='$vigilancia'";
+ ~~~
