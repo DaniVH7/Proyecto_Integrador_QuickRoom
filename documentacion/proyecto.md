@@ -389,8 +389,7 @@ INSERT INTO `estudiantes` (`id_estudiante`, `nombre`, `apellidop`, `apellidom`, 
 
 ## Consultas
 Cuantos Cuartos tienen Agua
-sql
-~~~
+~~~sql
 SELECT id_cuarto,agua FROM cuartos where agua ='$agua'
 ~~~
 
