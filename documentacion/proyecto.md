@@ -279,10 +279,9 @@ Diccionario de Datos
 Id_estudiante	|INTEGER	|NOT NULL|	Clave de Usuario
 Nombre	|VARCHAR|	250	|Nombre del Usuario
 Apellido paterno	|VARCHAR	|250|	Apellido Paterno del Usuario
-Apellido Materno	VARCHAR	250	Apellido Materno del Usuario
-Fecha
-Usuario	Date
-Varchar	NOT NULL
+Apellido Materno|	VARCHAR|	250|	Apellido Materno del Usuario
+Fecha|date| |Fecha de Nacimiento del Usuario
+Usuario	Varchar	NOT NULL
 250	Edad del Usuario
 Usuario para entrar
 Correo	VARCHAR	250	Email del usuario
