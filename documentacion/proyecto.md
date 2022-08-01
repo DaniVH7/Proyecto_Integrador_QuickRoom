@@ -294,7 +294,7 @@ Estatus|	|VARCHAR|	50|	Permite saber si el usuario esta activo o no
 | Campo | Tipo | Tamaño | Descripcion |
 | ----------- | ----------- | -----------| -----------|
 Id_administrador|	INT|	|NOT NULL|	Clavel del Administrador
-Nombre|	VARCHAR|	250|	Nombre del Administrador
+Nombre|		VARCHAR|	250|	Nombre del Administrador
 Apellido Paterno|	|VARCHAR|	250|	Apellido Paterno del Administrador
 Apellido Materno|VARCHAR|250|	Apellido Materno del Administrador
 Teléfono| varchar| 10	|Numero celular del Admin
