@@ -373,7 +373,7 @@ Tiempo_renta	|	varchar	|	250		|Cuanto tiempo se renta el cuarto
 
 - Datos Para iniciar Sesion como administrador
 - INSERT INTO `administradores` (`id_administrador`, `nombre`, `apellidop`, `apellidom`, `telefono`, `usuario`, `correo`, `contra`) VALUES
-(1, 'Cristian Daniel', 'Valeriano', 'Hernandez', '7713930384', 'CristianAdmin', 'cristian@email.com', 'cris123');
+(1, 'Cristian Daniel', 'Valeriano', 'Hernandez', '7713930384', 'CristianAdmin', 'cristian@email.com', '758d0fa2b9fb5d3fc3e6a9e5a72b07e0');
 
 - Datos Para un cuarto Nuevo
 - INSERT INTO `cuartos` (`id_cuarto`, `precio`, `amueblado`, `agua`, `luz`, `internet`, `vigilancia`, `cocina`, `baño_compartido`, `cuarto_compartido`, `tiempo_renta`, `tipo_condominio`, `calle`, `estado`, `municipio`, `geomapa`, `fotografias`) VALUES
@@ -383,16 +383,11 @@ Tiempo_renta	|	varchar	|	250		|Cuanto tiempo se renta el cuarto
 
 - Datos para un nuevo Estudiante
 INSERT INTO `estudiantes` (`id_estudiante`, `nombre`, `apellidop`, `apellidom`, `fecha`, `usuario`, `correo`, `contra`, `telefono`, `estatus`, `id_padre`) VALUES
-(1, 'Cristian Daniel', 'Valeriano', 'Hernandez', '2003-08-31', 'Cristian', 'cristian@email.com', 'cris123', '7713930384', NULL, NULL),
-(2, 'Fernando', 'Sampayo ', 'Perez', '1999-06-21', 'Majin', 'majin@email.com', 'majin123', '7712930989', NULL, NULL);
+(1, 'Cristian Daniel', 'Valeriano', 'Hernandez', '2003-08-31', 'Cristian', 'cristian@email.com', '758d0fa2b9fb5d3fc3e6a9e5a72b07e0', '7713930384', NULL, NULL),
+(2, 'Fernando', 'Sampayo ', 'Perez', '1999-06-21', 'Majin', 'majin@email.com', '40126f6ef575ffdf28ceff333dfde449', '7712930989', NULL, NULL);
 
 
 
 
-# 1.7 Generación de datos de prueba
-- ..\Downloads\usuarios.csv
-- ..\Downloads\prov.csv
-- ..\Downloads\admin.csv
-- ..\Downloads\cuartos.csv
 
 
