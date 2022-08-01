@@ -406,25 +406,25 @@ SELECT id_cuarto,Cocina, fotografias FROM cuartos where cocina='$cocina';
 ~~~
 Que cuartos son compartidos
 ~~~sql
-"SELECT id_cuarto,cuarto_compartido, fotografias FROM cuartos where cuarto_compartido='$cuarto'";
+SELECT id_cuarto,cuarto_compartido, fotografias FROM cuartos where cuarto_compartido='$cuarto';
 ~~~
 Que cuartos cuentan con internet
 ~~~sql
-"SELECT id_Cuarto,internet, fotografias FROM cuartos where internet='$internet'";
+SELECT id_Cuarto,internet, fotografias FROM cuartos where internet='$internet';
 ~~~
 Que cuartos cuentan con luz
 ~~~sql
-"SELECT id_cuarto,luz, fotografias FROM cuartos where luz='$luz'";
+SELECT id_cuarto,luz, fotografias FROM cuartos where luz='$luz';
 ~~~
 Que cuartos tienen un precio con un rango fijo
 ~~~sql
- "SELECT id_cuarto,precio, fotografias FROM cuartos where precio ='$precio'";
+ SELECT id_cuarto,precio, fotografias FROM cuartos where precio ='$precio';
  ~~~
  Tiempo en el que se renta el cuarto
  ~~~sql
- "SELECT id_cuarto,tiempo_renta, fotografias FROM cuartos where tiempo_renta='$renta'";
+ SELECT id_cuarto,tiempo_renta, fotografias FROM cuartos where tiempo_renta='$renta';
  ~~~
  Que cuartos cuentan con vigilancia
  ~~~sql
- "SELECT id_Cuarto,vigilancia, fotografias FROM cuartos where vigilancia='$vigilancia'";
+ SELECT id_Cuarto,vigilancia, fotografias FROM cuartos where vigilancia='$vigilancia';
  ~~~
