@@ -24,7 +24,7 @@ Dentro de esto definimos el proyecto en donde se resolverán todas las necesidad
 
 
  ## 1.3 Definición de las funciones del proyecto:
-  ## - Administrador
+  ## Administrador
 | Numero | Funcion | 
 | ----------- | ----------- | 
 | 1.1 | Crear un registro nuevo
@@ -37,7 +37,7 @@ Dentro de esto definimos el proyecto en donde se resolverán todas las necesidad
 | 1.8 | Imagenes acerca de la Habitacion
 | 1.9 | Publicar
 
-## -Usuario
+## Usuario
 |Numero | Funcion |
 |------------|--------------|
 | 1.1 | Crear un Registro nuevo
@@ -333,7 +333,7 @@ Fotografías| 	varchar	|	150	|	Fotografías del cuarto
 
 
 
--Padres
+## Padres
 | Campo | Tipo | Tamaño | Descripcion |
 | ----------- | ----------- | -----------| -----------|
 Id_padre|	int	|	not null|		Id del padre
@@ -345,7 +345,7 @@ Correo	|	varchar	|	250	|	Correo para iniciar sesión
 Contra	|	varchar	|	250	|	Contraseña para iniciar sesión
 Teléfono|	varchar	|	10	|	Teléfono celular del padre
 
--Registros
+## Registros
 | Campo | Tipo | Tamaño | Descripcion |
 | ----------- | ----------- | -----------| -----------|
 Id_registro|	int	|	not null|		Id del registro nuevo
@@ -359,7 +359,7 @@ Teléfono|	varchar	|	10	|	Teléfono celular para registro nuevo
 
 
 
--Rentas
+## Rentas
 | Campo | Tipo | Tamaño | Descripcion |
 | ----------- | ----------- | -----------| -----------|
 Id_renta	|	int	|	auto_increment	|Id de renta
@@ -375,12 +375,5 @@ Tiempo_renta	|	varchar	|	250		|	Cuanto tiempo se renta el cuarto
 - ..\Downloads\prov.csv
 - ..\Downloads\admin.csv
 - ..\Downloads\cuartos.csv
-
-| Pregunta:| 
-| ----------- |
-| Consulta |
-|-------------|
-| Resultado |
-|-------------|
 
 
