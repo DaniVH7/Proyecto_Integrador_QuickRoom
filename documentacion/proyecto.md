@@ -367,7 +367,26 @@ Id_administrador|	int	|	auto_increment	|Id del administrador
 Id_estudiante	|	int	|	auto_increment	|Id del estudiante
 Id_cuarto	|	int	|	auto_increment	|Id del cuarto
 Fecha		|	date	|	auto_increment	|Fecha que se hizo la renta
-Tiempo_renta	|	varchar	|	250		|	Cuanto tiempo se renta el cuarto
+Tiempo_renta	|	varchar	|	250		|Cuanto tiempo se renta el cuarto
+
+## Datos de Prueba
+
+- Datos Para iniciar Sesion como administrador
+- INSERT INTO `administradores` (`id_administrador`, `nombre`, `apellidop`, `apellidom`, `telefono`, `usuario`, `correo`, `contra`) VALUES
+(1, 'Cristian Daniel', 'Valeriano', 'Hernandez', '7713930384', 'CristianAdmin', 'cristian@email.com', 'cris123');
+
+- Datos Para un cuarto Nuevo
+- INSERT INTO `cuartos` (`id_cuarto`, `precio`, `amueblado`, `agua`, `luz`, `internet`, `vigilancia`, `cocina`, `baño_compartido`, `cuarto_compartido`, `tiempo_renta`, `tipo_condominio`, `calle`, `estado`, `municipio`, `geomapa`, `fotografias`) VALUES
+(1, '1300', 'si', 'si', 'si', 'si', 'no', 'no', 'si', 'no', '4 Meses', 'Edificio', 'Avenida Universidad', 'Hidalgo', 'Tulancingo', NULL, ''),
+(2, '1600', 'si', 'si', 'si', 'si', 'si', 'si', 'si', 'si', '1 Mes', 'Casa', 'Avenida Universidad', 'Hidalgo', 'Tulancingo', NULL, ''),
+(3, '1500', 'si', 'si', 'si', 'si', 'si', 'no', 'no', 'no', '5 Mes', 'Casa', 'Avenida Universidad', 'Hidalgo', 'Tulancingo', NULL, '');
+
+- Datos para un nuevo Estudiante
+INSERT INTO `estudiantes` (`id_estudiante`, `nombre`, `apellidop`, `apellidom`, `fecha`, `usuario`, `correo`, `contra`, `telefono`, `estatus`, `id_padre`) VALUES
+(1, 'Cristian Daniel', 'Valeriano', 'Hernandez', '2003-08-31', 'Cristian', 'cristian@email.com', 'cris123', '7713930384', NULL, NULL),
+(2, 'Fernando', 'Sampayo ', 'Perez', '1999-06-21', 'Majin', 'majin@email.com', 'majin123', '7712930989', NULL, NULL);
+
+
 
 
 # 1.7 Generación de datos de prueba
