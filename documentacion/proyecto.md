@@ -316,13 +316,13 @@ Luz	|	varchar	|	2	|	El cuarto tiene luz
 Internet|	varchar	|	2	|	El cuarto tiene Internet
 Vigilancia|	varchar	|	2	|	El cuarto tiene vigilancia
 Cocina	|	varchar	|	2	|	El cuarto tiene cocina
-Baño_		varchar	|	2	|	El cuarto tiene baño Compartido
-compartido|       		
-Cuarto_		varchar	|	2	|	El cuarto es compartido
-Compartido|	
+Baño_	|	varchar	|	2	|	El cuarto tiene baño Compartido
+compartido       		
+Cuarto_	|	varchar	|	2	|	El cuarto es compartido
+Compartido	
 Tiempo_renta|	varchar	|	2	|	Tiempo a ser rentado
-Tipo_		varchar	|	2	|
-Condominio|					Tiempo de condominio, casa o edificio
+Tipo_	|	varchar	|	2	|
+Condominio					Tiempo de condominio, casa o edificio
 Calle 	|	varchar	|	2	|	Calle del condominio
 Estado	|	varchar	|	2	|	Estado donde se ubica condómino
 Municipio|	varchar	|	2	|	Municipio donde se ubica el condominio
