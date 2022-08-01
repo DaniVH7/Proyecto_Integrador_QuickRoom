@@ -53,92 +53,224 @@ Dentro de esto definimos el proyecto en donde se resolverán todas las necesidad
 
 
 
+sql
+~~~
+ --
+-- Estructura de tabla para la tabla `administradores`
+--
 
-  ## 1.5 Creación de la base de datos (Script)
- ~~~sql
- CREATE DATABASE QUICKROOM;  
-USE QUICKROOM;
-~~~
-## Tabla Estudiantes
-~~~sql
-CREATE TABLE estudiantes(
-  id_estudiante int PRIMARY KEY AUTOINCREMENT NOT NULL,
-  nombre varchar(250),
-  apellidop varchar(250),
-  apellidom varchar(250),
-  fecha date,
-  usuario varchar(250),
-  correo varchar(250),
-  contra varchar(250),
-  telefono varchar(10),
-  estatus varchar(250) CHECK (`estatus` = 'Activo' or `estatus` = 'Inactivo'),
-  id_padre int references padres(id_padre)
-);
- 
-CREATE UNIQUE INDEX index_emai ON estudiantes(email);
-~~~
-## --Tabla Administradores--
-~~~sql
-CREATE TABLE administradores(
-  id_administrador int  PRIMARY KEY AUTOINCREMENT NOT NULL,
-  nombre varchar(250) , 
-  apellidop varchar(250) ,
-  apellidom varchar(250) ,
-  telefono varchar(10) ,
-  usuario varchar(250) ,
-  correo varchar(250) ,
-  contra varchar(32) 
-);
+CREATE TABLE `administradores` (
+  `id_administrador` int(11) NOT NULL,
+  `nombre` varchar(250) DEFAULT NULL,
+  `apellidop` varchar(250) DEFAULT NULL,
+  `apellidom` varchar(250) DEFAULT NULL,
+  `telefono` varchar(10) DEFAULT NULL,
+  `usuario` varchar(250) DEFAULT NULL,
+  `correo` varchar(250) DEFAULT NULL,
+  `contra` varchar(32) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+INSERT INTO `administradores` (`id_administrador`, `nombre`, `apellidop`, `apellidom`, `telefono`, `usuario`, `correo`, `contra`) VALUES
+(1, 'Cristian Daniel', 'Valeriano', 'Hernandez', '7713930384', 'CristianAdmin', 'cristian@email.com', 'cris123');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `cuartos`
+--
+
+CREATE TABLE `cuartos` (
+  `id_cuarto` int(11) NOT NULL,
+  `precio` varchar(12) DEFAULT NULL,
+  `amueblado` varchar(10) DEFAULT NULL CHECK (`amueblado` = 'si' or `amueblado` = 'no'),
+  `agua` varchar(250) DEFAULT NULL CHECK (`agua` = 'si' or `agua` = 'no'),
+  `luz` varchar(250) DEFAULT NULL CHECK (`luz` = 'si' or `luz` = 'no'),
+  `internet` varchar(250) DEFAULT NULL CHECK (`internet` = 'si' or `internet` = 'no'),
+  `vigilancia` varchar(250) DEFAULT NULL CHECK (`vigilancia` = 'si' or `vigilancia` = 'no'),
+  `cocina` varchar(250) DEFAULT NULL CHECK (`cocina` = 'si' or `cocina` = 'no'),
+  `baño_compartido` varchar(250) DEFAULT NULL CHECK (`baño_compartido` = 'si' or `baño_compartido` = 'no'),
+  `cuarto_compartido` varchar(10) DEFAULT NULL CHECK (`cuarto_compartido` = 'si' or `cuarto_compartido` = 'no'),
+  `tiempo_renta` varchar(50) DEFAULT NULL,
+  `tipo_condominio` varchar(250) DEFAULT NULL CHECK (`tipo_condominio` = 'casa' or `tipo_condominio` = 'edificio'),
+  `calle` varchar(250) DEFAULT NULL,
+  `estado` varchar(250) DEFAULT NULL,
+  `municipio` varchar(250) DEFAULT NULL,
+  `geomapa` varchar(250) DEFAULT NULL,
+  `fotografias` blob DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `cuartos`
+--
+
+INSERT INTO `cuartos` (`id_cuarto`, `precio`, `amueblado`, `agua`, `luz`, `internet`, `vigilancia`, `cocina`, `baño_compartido`, `cuarto_compartido`, `tiempo_renta`, `tipo_condominio`, `calle`, `estado`, `municipio`, `geomapa`, `fotografias`) VALUES
+(1, '1300', 'si', 'si', 'si', 'si', 'no', 'no', 'si', 'no', '4 Meses', 'Edificio', 'Avenida Universidad', 'Hidalgo', 'Tulancingo', NULL, ''),
+(2, '1600', 'si', 'si', 'si', 'si', 'si', 'si', 'si', 'si', '1 Mes', 'Casa', 'Avenida Universidad', 'Hidalgo', 'Tulancingo', NULL, ''),
+(3, '1500', 'si', 'si', 'si', 'si', 'si', 'no', 'no', 'no', '5 Mes', 'Casa', 'Avenida Universidad', 'Hidalgo', 'Tulancingo', NULL, '');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `estudiantes`
+--
+
+CREATE TABLE `estudiantes` (
+  `id_estudiante` int(11) NOT NULL,
+  `nombre` varchar(250) DEFAULT NULL,
+  `apellidop` varchar(250) DEFAULT NULL,
+  `apellidom` varchar(250) DEFAULT NULL,
+  `fecha` date DEFAULT NULL,
+  `usuario` varchar(250) DEFAULT NULL,
+  `correo` varchar(250) DEFAULT NULL,
+  `contra` varchar(250) DEFAULT NULL,
+  `telefono` varchar(10) DEFAULT NULL,
+  `estatus` varchar(250) DEFAULT NULL CHECK (`estatus` = 'Activo' or `estatus` = 'Inactivo'),
+  `id_padre` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `estudiantes`
+--
+
+INSERT INTO `estudiantes` (`id_estudiante`, `nombre`, `apellidop`, `apellidom`, `fecha`, `usuario`, `correo`, `contra`, `telefono`, `estatus`, `id_padre`) VALUES
+(1, 'Cristian Daniel', 'Valeriano', 'Hernandez', '2003-08-31', 'Cristian', 'cristian@email.com', 'cris123', '7713930384', NULL, NULL),
+(2, 'Fernando', 'Sampayo ', 'Perez', '1999-06-21', 'Majin', 'majin@email.com', 'majin123', '7712930989', NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `padres`
+--
+
+CREATE TABLE `padres` (
+  `id_padre` int(11) NOT NULL,
+  `nombre` varchar(250) DEFAULT NULL,
+  `apellidop` varchar(250) DEFAULT NULL,
+  `apellidom` varchar(250) DEFAULT NULL,
+  `usuario` varchar(250) DEFAULT NULL,
+  `correo` varchar(250) DEFAULT NULL,
+  `contra` varchar(32) DEFAULT NULL,
+  `telefono` varchar(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `registros`
+--
+
+CREATE TABLE `registros` (
+  `id_registro` int(11) NOT NULL,
+  `nombre` varchar(250) DEFAULT NULL,
+  `apellidop` varchar(250) DEFAULT NULL,
+  `apellidom` varchar(250) DEFAULT NULL,
+  `fecha` date DEFAULT NULL,
+  `usuario` varchar(100) DEFAULT NULL,
+  `correo` varchar(250) DEFAULT NULL,
+  `contra` varchar(250) DEFAULT NULL,
+  `telefono` varchar(10) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `rentas`
+--
+
+CREATE TABLE `rentas` (
+  `id_renta` int(11) NOT NULL,
+  `id_administrador` int(11) DEFAULT NULL,
+  `id_estudiante` int(11) DEFAULT NULL,
+  `id_cuarto` int(11) DEFAULT NULL,
+  `fecha` date DEFAULT NULL,
+  `tiempo_de_renta` varchar(250) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Índices para tablas volcadas
+--
+
+--
+-- Indices de la tabla `administradores`
+--
+ALTER TABLE `administradores`
+  ADD PRIMARY KEY (`id_administrador`);
+
+--
+-- Indices de la tabla `cuartos`
+--
+ALTER TABLE `cuartos`
+  ADD PRIMARY KEY (`id_cuarto`);
+
+--
+-- Indices de la tabla `estudiantes`
+--
+ALTER TABLE `estudiantes`
+  ADD PRIMARY KEY (`id_estudiante`),
+  ADD UNIQUE KEY `index_estudiantes` (`correo`,`telefono`);
+
+--
+-- Indices de la tabla `padres`
+--
+ALTER TABLE `padres`
+  ADD PRIMARY KEY (`id_padre`),
+  ADD UNIQUE KEY `index_padres` (`correo`,`telefono`);
+
+--
+-- Indices de la tabla `registros`
+--
+ALTER TABLE `registros`
+  ADD PRIMARY KEY (`id_registro`),
+  ADD UNIQUE KEY `index_registros` (`correo`,`telefono`);
+
+--
+-- Indices de la tabla `rentas`
+--
+ALTER TABLE `rentas`
+  ADD PRIMARY KEY (`id_renta`);
+
+--
+-- AUTO_INCREMENT de las tablas volcadas
+--
+
+--
+-- AUTO_INCREMENT de la tabla `administradores`
+--
+ALTER TABLE `administradores`
+  MODIFY `id_administrador` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT de la tabla `cuartos`
+--
+ALTER TABLE `cuartos`
+  MODIFY `id_cuarto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT de la tabla `estudiantes`
+--
+ALTER TABLE `estudiantes`
+  MODIFY `id_estudiante` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
+-- AUTO_INCREMENT de la tabla `padres`
+--
+ALTER TABLE `padres`
+  MODIFY `id_padre` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `registros`
+--
+ALTER TABLE `registros`
+  MODIFY `id_registro` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `rentas`
+--
+ALTER TABLE `rentas`
+  MODIFY `id_renta` int(11) NOT NULL AUTO_INCREMENT;
+COMMIT;
 ~~~
 
-## --Tabla de Cuartos--
-~~~sql
-CREATE TABLE cuartos(
-  id_cuarto int PRIMARY KEY AUTOINCREMENT NOT NULL,
-  precio varchar(12),
-  amueblado varchar(10)  CHECK (`amueblado` = 'si' or `amueblado` = 'no'),
-  agua varchar(250)  CHECK (`agua` = 'si' or `agua` = 'no'),
-  luz varchar(250)  CHECK (`luz` = 'si' or `luz` = 'no'),
-  internet varchar(250) CHECK (`internet` = 'si' or `internet` = 'no'),
-  vigilancia varchar(250)  CHECK (`vigilancia` = 'si' or `vigilancia` = 'no'),
-  cocina varchar(250) CHECK (`cocina` = 'si' or `cocina` = 'no'),
-  baño_compartido varchar(250) CHECK (`baño_compartido` = 'si' or `baño_compartido` = 'no'),
-  cuarto_compartido varchar(10)  CHECK (`cuarto_compartido` = 'si' or `cuarto_compartido` = 'no'),
-  tiempo_renta varchar(50) ,
-  tipo_condominio varchar(250)  CHECK (`tipo_condominio` = 'casa' or `tipo_condominio` = 'edificio'),
-  calle varchar(250),
-  estado varchar(250) 
-  municipio varchar(250),
-  geomapa varchar(250),
-  fotografias` varchar(250) 
-);
-~~~
-
-## Tabla Padres
-~~~sql
-CREATE TABLE padres(
-  id_padre int PRIMARY KEY AUTOINCREMENT NOT NULL,
-  nombre varchar(250) ,
-  apellidop varchar(250) ,
-  apellidom varchar(250) ,
-  usuario varchar(250) ,
-  correo varchar(250) ,
-  contra varchar(32) ,
-  telefono varchar(10) 
-);
-~~~
-
-## Tabla rentas
-~~~sql
-CREATE TABLE rentas(
-  id_renta int PRIMARY KEY AUTOINCREMENTNOT NULL,
-  id_administrador int references administradores(id_administrador),
-  id_estudiante int references estudiantes(id_estudiante),
-  id_cuarto int references cuartos(id_cuarto),
-  fecha date ,
-  tiempo_de_renta varchar(250) 
-);
-~~~
 
 # 1.6 Diccionario de datos
 ## - Usuarios
