@@ -273,11 +273,12 @@ COMMIT;
 # 1.6 Diccionario de datos
 Diccionario de Datos
 
-- Estudiantes
-Campo	Tipo	Tamaño	Descripción
-Id_estudiante	INTEGER	NOT NULL	Clave de Usuario
-Nombre	VARCHAR	250	Nombre del Usuario
-Apellido paterno	VARCHAR	250	Apellido Paterno del Usuario
+##Estudiantes
+| Campo | Tipo | Tamaño | Descripcion |
+| ----------- | ----------- | -----------| -----------|
+Id_estudiante	|INTEGER	|NOT NULL|	Clave de Usuario
+Nombre	|VARCHAR|	250	|Nombre del Usuario
+Apellido paterno	|VARCHAR	|250|	Apellido Paterno del Usuario
 Apellido Materno	VARCHAR	250	Apellido Materno del Usuario
 Fecha
 Usuario	Date
