@@ -388,11 +388,14 @@ INSERT INTO `estudiantes` (`id_estudiante`, `nombre`, `apellidop`, `apellidom`, 
 
 
 ## Consultas
-Total de Cuartos con Agua
+Que Cuartos tienen Agua
 ~~~sql
-SELECT id_cuarto,agua FROM cuartos where agua ='$agua'
+SELECT id_cuarto,agua FROM cuartos where agua ='$agua';
 ~~~
-
+Que cuartos estan amueblados
+~~~sql
+SELECT id_cuarto, amueblado, fotografias FROM cuartos where amueblado='$amueblado';
+~~~
 
 
 
