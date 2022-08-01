@@ -387,6 +387,12 @@ INSERT INTO `estudiantes` (`id_estudiante`, `nombre`, `apellidop`, `apellidom`, 
 (2, 'Fernando', 'Sampayo ', 'Perez', '1999-06-21', 'Majin', 'majin@email.com', '40126f6ef575ffdf28ceff333dfde449', '7712930989', NULL, NULL);
 
 
+## Consultas
+Cuantos Cuartos tienen Agua
+sql
+~~~
+SELECT id_cuarto,agua FROM cuartos where agua ='$agua'
+~~~
 
 
 
