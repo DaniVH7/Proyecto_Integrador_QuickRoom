@@ -123,7 +123,7 @@ CREATE TABLE `estudiantes` (
   `contra` varchar(250) DEFAULT NULL,
   `telefono` varchar(10) DEFAULT NULL,
   `estatus` varchar(250) DEFAULT NULL CHECK (`estatus` = 'Activo' or `estatus` = 'Inactivo'),
-  `id_padre` int(11) DEFAULT NULL
+  FOREIGN KEY (id_padre) REFERENCES padres(id_padre)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -177,9 +177,9 @@ CREATE TABLE `registros` (
 
 CREATE TABLE `rentas` (
   `id_renta` int(11) NOT NULL,
-  `id_administrador` int(11) DEFAULT NULL,
-  `id_estudiante` int(11) DEFAULT NULL,
-  `id_cuarto` int(11) DEFAULT NULL,
+  FOREIGN KEY (id_cuarto) REFERENCES cuartos(id_cuarto),
+  FOREIGN KEY (id_administrador) REFERENCES administradores(id_administrador),
+  FOREIGN KEY (id_estudiante) REFERENCES estudiantes(id_estudiante),
   `fecha` date DEFAULT NULL,
   `tiempo_de_renta` varchar(250) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -428,3 +428,5 @@ Que cuartos tienen un precio con un rango fijo
  ~~~sql
  SELECT id_Cuarto,vigilancia, fotografias FROM cuartos where vigilancia='$vigilancia';
  ~~~
+ 
+
