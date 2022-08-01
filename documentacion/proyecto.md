@@ -273,7 +273,7 @@ COMMIT;
 # 1.6 Diccionario de datos
 Diccionario de Datos
 
-##Estudiantes
+## Estudiantes
 | Campo | Tipo | Tamaño | Descripcion |
 | ----------- | ----------- | -----------| -----------|
 Id_estudiante	|INTEGER	|NOT NULL|	Clave de Usuario
@@ -290,7 +290,7 @@ Estatus|	|VARCHAR|	50|	Permite saber si el usuario esta activo o no
 
 
 
-##Administradores
+## Administradores
 | Campo | Tipo | Tamaño | Descripcion |
 | ----------- | ----------- | -----------| -----------|
 Id_administrador	|	INT|	|NOT NULL|	Clavel del Administrador
@@ -305,7 +305,7 @@ Estatus |	VARCHAR|	50	|Permite saber si el Administrador esta Activo o no
 
 
 
-- Cuartos
+## Cuartos
 | Campo | Tipo | Tamaño | Descripcion |
 | ----------- | ----------- | -----------| -----------|
 Id_cuartos|	INTEGER|	NOT NULL|	Clave del Cuarto
