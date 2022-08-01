@@ -51,8 +51,6 @@ Dentro de esto definimos el proyecto en donde se resolverán todas las necesidad
  ![image](https://user-images.githubusercontent.com/102370094/182036566-b9cd5fcd-cd81-4709-b716-638b3d59670b.png)
 
 
-
-
 sql
 ~~~
  --
@@ -273,57 +271,111 @@ COMMIT;
 
 
 # 1.6 Diccionario de datos
-## - Usuarios
-| Campo | Tipo | Tamaño | Descripcion |
-| ----------- | ----------- | -----------| -----------|
-| Uid | INTEGER |NOT NULL | Clave de Usuario
-| Nombre | VARCHAR | 250 | Nombre del Usuario
-| Apellido paterno |VARCHAR | 250 | Apellido Paterno del Usuario
-| Apellido Materno |VARCHAR | 250 | Apellido Materno del Usuario|
-| Edad  |   INTEGER  |NOT NULL | Edad del Usuario
-| Email |   VARCHAR |   250 | Email del usuario
-| Password  | VARCHAR | 32 | Contraseña del Usuario
-| Telefono | INTEGER | NOT NULL | Telefono del Usuario
-| Status    |VARCHAR  | 50 | Permite saber si el usuario esta activo o  no
+Diccionario de Datos
 
-## - Administrador
-| Campo | Tipo | Tamaño | Descripcion |
-| ----------- | ----------- | -----------| -----------|
-| Aid | INTEGER | NOT NULL | Clavel del Administrador 
-| Nombre | VARCHAR | 250 | Nombre del Administrador
-| Apellido Paterno | VARCHAR | 250 | Apellido Paterno del Administrador
-| Apellido Materno | VARCHAR | 250 | Apellido Materno del Administrador
-| Email | VARCHAR | 250 | Email del Administrador
-| Password | VARCHAR | 32 | Contraseña del Administrador
-| Status | VARCHAR | 50 | Permite saber si el Administrador esta Activo o no
+- Estudiantes
+Campo	Tipo	Tamaño	Descripción
+Id_estudiante	INTEGER	NOT NULL	Clave de Usuario
+Nombre	VARCHAR	250	Nombre del Usuario
+Apellido paterno	VARCHAR	250	Apellido Paterno del Usuario
+Apellido Materno	VARCHAR	250	Apellido Materno del Usuario
+Fecha
+Usuario	Date
+Varchar	NOT NULL
+250	Edad del Usuario
+Usuario para entrar
+Correo	VARCHAR	250	Email del usuario
+Contra	VARCHAR	32	Contraseña del Usuario
+Teléfono	INTEGER	NOT NULL	Teléfono del Usuario
+Estatus	VARCHAR	50	Permite saber si el usuario esta activo o no
 
-## - Cuartos
-| Campo | Tipo | Tamaño | Descripcion |
-| ----------- | ----------- | -----------| -----------|
-| cid  | INTEGER | NOT NULL | Clave del Cuarto
-| Descripcion | VARCHAR | 500 | Da una breve descripcion acerca de la habitacion
-| Aid | INTEGER | NOT NULL | Conecta la tabla de Admin y cuartos
-| idprov | INTEGER | NOT NULL | Conecta la tabla de proveedor con cuartos
 
-## - Proveedor
-| Campo | Tipo | Tamaño | Descripcion |
-| ----------- | ----------- | -----------| -----------|
-| idprov | INTEGER | NOT NULL | Clave del Proveedor
-| nombre | VARCHAR | 250 | Nombrel Proveedor 
-| Email  | VARCHAR | 250 | Email del proveedor
-| Telefono | INTEGER | NOT NULL | Muestra el numero celular del proveedor
-| Direccion | VARCHAR | 300 | Indica la direccion de el proveedor
-|idD | INTEGER | NOT NULL | Conecta la tabla proovedor con direccion
 
-## - Direccion
-| Campo | Tipo | Tamaño | Descripcion |
-| ----------- | ----------- | -----------| -----------|
-|idD  | INTEGER | NOT NULL | Id de la direccion
-| Estado | VARCHAR | 250 | Indica el estado donde se ubica el proveedor
-| Municipio | VARCHAR | 250 | Indica el municipio donde se ubica el proveedor
-| Colonia  | VARCHAR | 250 |  Indica la colonia donde se ubica el proveedor
-| Calle  | VARCHAR | 250 |  Indica la calle donde se ubica el proveedor
-| Codigo Postal  | INTEGER | NOT NULL | Muestra el CP de la entidad donde se ubica el proveedor
+
+- Administradores
+Campo	Tipo	Tamaño	Descripción
+Id_administrador	INT	NOT NULL	Clavel del Administrador
+Nombre	VARCHAR	250	Nombre del Administrador
+Apellido Paterno	VARCHAR	250	Apellido Paterno del Administrador
+Apellido Materno
+Teléfono
+Usuario	VARCHAR
+varchar
+varchar	250
+250
+250	Apellido Materno del Administrador
+Numero celular del Admin
+Usuario del Administrador
+Correo	VARCHAR	250	Email del Administrador
+contra	VARCHAR	32	Contraseña del Administrador
+Estatus	VARCHAR	50	Permite saber si el Administrador esta Activo o no
+
+
+- Cuartos
+Campo		Tipo		Tamaño	Descripción
+Id_cuartos	INTEGER	NOT NULL	Clave del Cuarto
+Precio		varchar		12		Precio del cuarto
+Amueblado	varchar		2		Si el cuarto esta amueblado
+Agua		varchar		2		El cuarto tiene agua
+Luz		varchar		2		El cuarto tiene luz
+Internet	varchar		2		El cuarto tiene Internet
+Vigilancia	varchar		2		El cuarto tiene vigilancia
+Cocina		varchar		2		El cuarto tiene cocina
+Baño_		varchar		2		El cuarto tiene baño Compartido
+compartido       		
+Cuarto_	varchar		2		El cuarto es compartido
+Compartido	
+Tiempo_renta	varchar		2		Tiempo a ser rentado
+Tipo_		varchar		2
+Condominio					Tiempo de condominio, casa o edificio
+Calle 		varchar		2		Calle del condominio
+Estado		varchar		2		Estado donde se ubica condómino
+Municipio	varchar		2		Municipio donde se ubica el condominio
+Mapa		varchar		2		Mapa de la ubicación
+Fotografías 	varchar		blob		Fotografías del cuarto
+
+
+
+
+
+-Padres
+Campo		Tipo		Tamaño	Descripción
+Id_padre	int		not null		Id del padre
+Nombre	varchar		250		Nombre del padre
+Apellidop	varchar		250		Apellido del padre
+Apellidom	varchar		250		Apellido materno del padre
+Usuario		varchar		250		Usuario para entrar
+Correo		varchar		250		Correo para iniciar sesión
+Contra		varchar		250		Contraseña para iniciar sesión
+Teléfono	varchar		10		Teléfono celular del padre
+
+-Registros
+Campo		Tipo		Tamaño	Descripción
+Id_registro	int		not null		Id del registro nuevo
+Nombre	varchar		250		Nombre del nuevo registro
+Apellidop	varchar		250		Apellido del nuevo registro
+Apellidom	varchar		250		Apellido materno del nuevo registro
+Usuario		varchar		250		Usuario para registro nuevo
+Correo		varchar		250		Correo para iniciar sesión
+Contra		varchar		250		Contraseña para iniciar sesión
+Teléfono	varchar		10		Teléfono celular para registro nuevo
+
+
+
+
+
+
+
+
+-Rentas
+Campo			Tipo		Tamaño		Descripción
+Id_renta		int		auto_increment	Id de renta
+Id_administrador	int		auto_increment	Id del administrador
+Id_estudiante		int		auto_increment	Id del estudiante
+Id_cuarto		int		auto_increment	Id del cuarto
+Fecha			date		auto_increment	Fecha que se hizo la renta
+Tiempo_renta		varchar		250			Cuanto tiempo se renta el cuarto
+
 
 # 1.7 Generación de datos de prueba
 - ..\Downloads\usuarios.csv
