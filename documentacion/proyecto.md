@@ -51,8 +51,8 @@ Dentro de esto definimos el proyecto en donde se resolverán todas las necesidad
  ![image](https://user-images.githubusercontent.com/102370094/182036566-b9cd5fcd-cd81-4709-b716-638b3d59670b.png)
 
 
-sql
-~~~
+
+~~~sql
  --
 -- Estructura de tabla para la tabla `administradores`
 --
@@ -388,7 +388,7 @@ INSERT INTO `estudiantes` (`id_estudiante`, `nombre`, `apellidop`, `apellidom`, 
 
 
 ## Consultas
-Cuantos Cuartos tienen Agua
+Total de Cuartos con Agua
 ~~~sql
 SELECT id_cuarto,agua FROM cuartos where agua ='$agua'
 ~~~
