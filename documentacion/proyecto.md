@@ -281,100 +281,92 @@ Nombre	|VARCHAR|	250	|Nombre del Usuario
 Apellido paterno	|VARCHAR	|250|	Apellido Paterno del Usuario
 Apellido Materno|	VARCHAR|	250|	Apellido Materno del Usuario
 Fecha|date| |Fecha de Nacimiento del Usuario
-Usuario	Varchar	NOT NULL
-250	Edad del Usuario
-Usuario para entrar
-Correo	VARCHAR	250	Email del usuario
-Contra	VARCHAR	32	Contraseña del Usuario
-Teléfono	INTEGER	NOT NULL	Teléfono del Usuario
-Estatus	VARCHAR	50	Permite saber si el usuario esta activo o no
+Usuario	|Varchar|250 NOT NUL| Nombre para iniciar Sesion
+Correo|	VARCHAR	|250|	Email del usuario
+Contra|	VARCHAR|	32|	Contraseña del Usuario
+Teléfono|	INTEGER|	NOT NULL|	|Teléfono del Usuario
+Estatus|	|VARCHAR|	50|	Permite saber si el usuario esta activo o no
 
 
 
 
 - Administradores
-Campo	Tipo	Tamaño	Descripción
-Id_administrador	INT	NOT NULL	Clavel del Administrador
-Nombre	VARCHAR	250	Nombre del Administrador
-Apellido Paterno	VARCHAR	250	Apellido Paterno del Administrador
-Apellido Materno
-Teléfono
-Usuario	VARCHAR
-varchar
-varchar	250
-250
-250	Apellido Materno del Administrador
-Numero celular del Admin
-Usuario del Administrador
-Correo	VARCHAR	250	Email del Administrador
-contra	VARCHAR	32	Contraseña del Administrador
-Estatus	VARCHAR	50	Permite saber si el Administrador esta Activo o no
+| Campo | Tipo | Tamaño | Descripcion |
+| ----------- | ----------- | -----------| -----------|
+Id_administrador|	INT|	|NOT NULL|	Clavel del Administrador
+Nombre|	VARCHAR|	250|	Nombre del Administrador
+Apellido Paterno|	|VARCHAR|	250|	Apellido Paterno del Administrador
+Apellido Materno|VARCHAR|250|	Apellido Materno del Administrador
+Teléfono| varchar| 10	|Numero celular del Admin
+Usuario	|VARCHAR|250|  Nombre para iniciar Sesion
+Correo|	VARCHAR|	250|	Email del Administrador
+contra|	VARCHAR|	32	|Contraseña del Administrador
+Estatus|	VARCHAR|	50	|Permite saber si el Administrador esta Activo o no
 
 
 - Cuartos
-Campo		Tipo		Tamaño	Descripción
-Id_cuartos	INTEGER	NOT NULL	Clave del Cuarto
-Precio		varchar		12		Precio del cuarto
-Amueblado	varchar		2		Si el cuarto esta amueblado
-Agua		varchar		2		El cuarto tiene agua
-Luz		varchar		2		El cuarto tiene luz
-Internet	varchar		2		El cuarto tiene Internet
-Vigilancia	varchar		2		El cuarto tiene vigilancia
-Cocina		varchar		2		El cuarto tiene cocina
-Baño_		varchar		2		El cuarto tiene baño Compartido
-compartido       		
-Cuarto_	varchar		2		El cuarto es compartido
-Compartido	
-Tiempo_renta	varchar		2		Tiempo a ser rentado
-Tipo_		varchar		2
-Condominio					Tiempo de condominio, casa o edificio
-Calle 		varchar		2		Calle del condominio
-Estado		varchar		2		Estado donde se ubica condómino
-Municipio	varchar		2		Municipio donde se ubica el condominio
-Mapa		varchar		2		Mapa de la ubicación
-Fotografías 	varchar		blob		Fotografías del cuarto
+| Campo | Tipo | Tamaño | Descripcion |
+| ----------- | ----------- | -----------| -----------|
+Id_cuartos|	INTEGER|	NOT NULL|	Clave del Cuarto
+Precio|		varchar	|	12	|	Precio del cuarto
+Amueblado|	varchar	|	2	|	Si el cuarto esta amueblado
+Agua	|	varchar	|	2	|	El cuarto tiene agua
+Luz	|	varchar	|	2	|	El cuarto tiene luz
+Internet|	varchar	|	2	|	El cuarto tiene Internet
+Vigilancia|	varchar	|	2	|	El cuarto tiene vigilancia
+Cocina	|	varchar	|	2	|	El cuarto tiene cocina
+Baño_		varchar	|	2	|	El cuarto tiene baño Compartido
+compartido|       		
+Cuarto_		varchar	|	2	|	El cuarto es compartido
+Compartido|	
+Tiempo_renta|	varchar	|	2	|	Tiempo a ser rentado
+Tipo_		varchar	|	2	|
+Condominio|					Tiempo de condominio, casa o edificio
+Calle 	|	varchar	|	2	|	Calle del condominio
+Estado	|	varchar	|	2	|	Estado donde se ubica condómino
+Municipio|	varchar	|	2	|	Municipio donde se ubica el condominio
+Mapa	|	varchar	|	2	|	Mapa de la ubicación
+Fotografías| 	varchar	|	150	|	Fotografías del cuarto
 
 
 
 
 
 -Padres
-Campo		Tipo		Tamaño	Descripción
-Id_padre	int		not null		Id del padre
-Nombre	varchar		250		Nombre del padre
-Apellidop	varchar		250		Apellido del padre
-Apellidom	varchar		250		Apellido materno del padre
-Usuario		varchar		250		Usuario para entrar
-Correo		varchar		250		Correo para iniciar sesión
-Contra		varchar		250		Contraseña para iniciar sesión
-Teléfono	varchar		10		Teléfono celular del padre
+| Campo | Tipo | Tamaño | Descripcion |
+| ----------- | ----------- | -----------| -----------|
+Id_padre|	int	|	not null|		Id del padre
+Nombre	|	varchar	|	250	|	Nombre del padre
+Apellidop|	varchar	|	250	|	Apellido del padre
+Apellidom|	varchar	|	250	|	Apellido materno del padre
+Usuario	|	varchar	|	250	|	Usuario para entrar
+Correo	|	varchar	|	250	|	Correo para iniciar sesión
+Contra	|	varchar	|	250	|	Contraseña para iniciar sesión
+Teléfono|	varchar	|	10	|	Teléfono celular del padre
 
 -Registros
-Campo		Tipo		Tamaño	Descripción
-Id_registro	int		not null		Id del registro nuevo
-Nombre	varchar		250		Nombre del nuevo registro
-Apellidop	varchar		250		Apellido del nuevo registro
-Apellidom	varchar		250		Apellido materno del nuevo registro
-Usuario		varchar		250		Usuario para registro nuevo
-Correo		varchar		250		Correo para iniciar sesión
-Contra		varchar		250		Contraseña para iniciar sesión
-Teléfono	varchar		10		Teléfono celular para registro nuevo
-
-
-
-
-
+| Campo | Tipo | Tamaño | Descripcion |
+| ----------- | ----------- | -----------| -----------|
+Id_registro|	int	|	not null|		Id del registro nuevo
+Nombre	|	varchar	|	250	|	Nombre del nuevo registro
+Apellidop|	varchar	|	250	|	Apellido del nuevo registro
+Apellidom|	varchar	|	250	|	Apellido materno del nuevo registro
+Usuario	|	varchar	|	250	|	Usuario para registro nuevo
+Correo	|	varchar	|	250	|	Correo para iniciar sesión
+Contra	|	varchar	|	250	|	Contraseña para iniciar sesión
+Teléfono|	varchar	|	10	|	Teléfono celular para registro nuevo
 
 
 
 -Rentas
-Campo			Tipo		Tamaño		Descripción
-Id_renta		int		auto_increment	Id de renta
-Id_administrador	int		auto_increment	Id del administrador
-Id_estudiante		int		auto_increment	Id del estudiante
-Id_cuarto		int		auto_increment	Id del cuarto
-Fecha			date		auto_increment	Fecha que se hizo la renta
-Tiempo_renta		varchar		250			Cuanto tiempo se renta el cuarto
+| Campo | Tipo | Tamaño | Descripcion |
+| ----------- | ----------- | -----------| -----------|
+Id_renta	|	int	|	auto_increment	|Id de renta
+Id_administrador|	int	|	auto_increment	|Id del administrador
+Id_estudiante	|	int	|	auto_increment	|Id del estudiante
+Id_cuarto	|	int	|	auto_increment	|Id del cuarto
+Fecha		|	date	|	auto_increment	|Fecha que se hizo la renta
+Tiempo_renta	|	varchar	|	250		|	Cuanto tiempo se renta el cuarto
 
 
 # 1.7 Generación de datos de prueba
