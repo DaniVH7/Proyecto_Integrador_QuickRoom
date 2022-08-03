@@ -183,7 +183,7 @@ CREATE TABLE `rentas` (
   `fecha` date DEFAULT NULL,
   `tiempo_de_renta` varchar(250) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
+~~~
 
 
 
