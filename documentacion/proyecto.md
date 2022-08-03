@@ -58,7 +58,7 @@ Dentro de esto definimos el proyecto en donde se resolverán todas las necesidad
 --
 
 CREATE TABLE `administradores` (
-  `id_administrador` int(11) NOT NULL,
+  `id_administrador int PRIMARY KEY  NOT NULL,
   `nombre` varchar(250) DEFAULT NULL,
   `apellidop` varchar(250) DEFAULT NULL,
   `apellidom` varchar(250) DEFAULT NULL,
@@ -78,7 +78,7 @@ INSERT INTO `administradores` (`id_administrador`, `nombre`, `apellidop`, `apell
 --
 
 CREATE TABLE `cuartos` (
-  `id_cuarto` int(11) NOT NULL,
+  `id_cuarto` int PRIMARY KEY NOT NULL,
   `precio` varchar(12) DEFAULT NULL,
   `amueblado` varchar(10) DEFAULT NULL CHECK (`amueblado` = 'si' or `amueblado` = 'no'),
   `agua` varchar(250) DEFAULT NULL CHECK (`agua` = 'si' or `agua` = 'no'),
@@ -113,7 +113,7 @@ INSERT INTO `cuartos` (`id_cuarto`, `precio`, `amueblado`, `agua`, `luz`, `inter
 --
 
 CREATE TABLE `estudiantes` (
-  `id_estudiante` int(11) NOT NULL,
+  `id_estudiante` int PRIMARY KEY NOT NULL,
   `nombre` varchar(250) DEFAULT NULL,
   `apellidop` varchar(250) DEFAULT NULL,
   `apellidom` varchar(250) DEFAULT NULL,
@@ -141,7 +141,7 @@ INSERT INTO `estudiantes` (`id_estudiante`, `nombre`, `apellidop`, `apellidom`, 
 --
 
 CREATE TABLE `padres` (
-  `id_padre` int(11) NOT NULL,
+  `id_padre` int PRIMARY KEY NOT NULL,
   `nombre` varchar(250) DEFAULT NULL,
   `apellidop` varchar(250) DEFAULT NULL,
   `apellidom` varchar(250) DEFAULT NULL,
@@ -158,7 +158,7 @@ CREATE TABLE `padres` (
 --
 
 CREATE TABLE `registros` (
-  `id_registro` int(11) NOT NULL,
+  `id_registro` int PRIMARY KEY NOT NULL,
   `nombre` varchar(250) DEFAULT NULL,
   `apellidop` varchar(250) DEFAULT NULL,
   `apellidom` varchar(250) DEFAULT NULL,
@@ -176,7 +176,7 @@ CREATE TABLE `registros` (
 --
 
 CREATE TABLE `rentas` (
-  `id_renta` int(11) NOT NULL,
+  `id_renta` int PRIMARY KEY  NOT NULL,
   FOREIGN KEY (id_cuarto) REFERENCES cuartos(id_cuarto),
   FOREIGN KEY (id_administrador) REFERENCES administradores(id_administrador),
   FOREIGN KEY (id_estudiante) REFERENCES estudiantes(id_estudiante),
@@ -184,90 +184,7 @@ CREATE TABLE `rentas` (
   `tiempo_de_renta` varchar(250) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Índices para tablas volcadas
---
 
---
--- Indices de la tabla `administradores`
---
-ALTER TABLE `administradores`
-  ADD PRIMARY KEY (`id_administrador`);
-
---
--- Indices de la tabla `cuartos`
---
-ALTER TABLE `cuartos`
-  ADD PRIMARY KEY (`id_cuarto`);
-
---
--- Indices de la tabla `estudiantes`
---
-ALTER TABLE `estudiantes`
-  ADD PRIMARY KEY (`id_estudiante`),
-  ADD UNIQUE KEY `index_estudiantes` (`correo`,`telefono`);
-
---
--- Indices de la tabla `padres`
---
-ALTER TABLE `padres`
-  ADD PRIMARY KEY (`id_padre`),
-  ADD UNIQUE KEY `index_padres` (`correo`,`telefono`);
-
---
--- Indices de la tabla `registros`
---
-ALTER TABLE `registros`
-  ADD PRIMARY KEY (`id_registro`),
-  ADD UNIQUE KEY `index_registros` (`correo`,`telefono`);
-
---
--- Indices de la tabla `rentas`
---
-ALTER TABLE `rentas`
-  ADD PRIMARY KEY (`id_renta`);
-
---
--- AUTO_INCREMENT de las tablas volcadas
---
-
---
--- AUTO_INCREMENT de la tabla `administradores`
---
-ALTER TABLE `administradores`
-  MODIFY `id_administrador` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-
---
--- AUTO_INCREMENT de la tabla `cuartos`
---
-ALTER TABLE `cuartos`
-  MODIFY `id_cuarto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
---
--- AUTO_INCREMENT de la tabla `estudiantes`
---
-ALTER TABLE `estudiantes`
-  MODIFY `id_estudiante` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
-
---
--- AUTO_INCREMENT de la tabla `padres`
---
-ALTER TABLE `padres`
-  MODIFY `id_padre` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT de la tabla `registros`
---
-ALTER TABLE `registros`
-  MODIFY `id_registro` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT de la tabla `rentas`
---
-ALTER TABLE `rentas`
-  MODIFY `id_renta` int(11) NOT NULL AUTO_INCREMENT;
-COMMIT;
-~~~
 
 
 # 1.6 Diccionario de datos
