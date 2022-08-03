@@ -238,8 +238,8 @@ compartido
 Cuarto_	|	varchar	|	2	|	El cuarto es compartido
 Compartido	
 Tiempo_renta|	varchar	|	2	|	Tiempo a ser rentado
-Tipo_	|	varchar	|	2	|
-Condominio					Tiempo de condominio, casa o edificio
+Tipo_	|	varchar	|	2	|Tipo de condominio, casa o edificio
+Condominio					
 Calle 	|	varchar	|	2	|	Calle del condominio
 Estado	|	varchar	|	2	|	Estado donde se ubica condómino
 Municipio|	varchar	|	2	|	Municipio donde se ubica el condominio
