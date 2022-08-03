@@ -58,7 +58,7 @@ Dentro de esto definimos el proyecto en donde se resolverán todas las necesidad
 --
 
 CREATE TABLE `administradores` (
-  `id_administrador int PRIMARY KEY  NOT NULL,
+  `id_administrador' int PRIMARY KEY  NOT NULL,
   `nombre` varchar(250) DEFAULT NULL,
   `apellidop` varchar(250) DEFAULT NULL,
   `apellidom` varchar(250) DEFAULT NULL,
