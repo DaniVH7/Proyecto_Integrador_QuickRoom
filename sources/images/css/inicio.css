@@ -1,0 +1,95 @@
+.container
+{
+    background-color: rgb(208, 1, 27);
+    width: 100%;
+    height: 100%;
+}
+.iniciar{
+    border: 1px solid black;
+    width: 50%;
+    height: 100%;
+    margin-left: 20%;
+}
+.user{
+    border: 1px solid black;
+    width: 45%;
+    height: 30%;
+    text-align: center;
+
+}
+.admin{
+    border: 1px solid black;
+    width: 45%;
+    height: 30%;
+    float: right;
+    text-align: center;
+}
+.padres{
+    border: 1px solid black;
+    width: 40%;
+    height: 30%;
+    margin: auto;
+    text-align: center;
+}
+.usuario{
+    border: 1px solid black;
+    width: 100%;
+    height: 30%;
+}
+.imagen{
+    width: 100%;
+    height: 12%;
+    text-align: center;
+    color: white;
+}
+/* Estilo de Barra*/
+#navlist {
+    background-color: #000000;
+    position: absolute;
+    width: 49.5%;
+}
+      
+/* styling navlist anchor element */
+#navlist a {
+    float:left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 15px;
+}
+  
+.navlist-right{
+    float:right;
+}
+
+/* hover effect of navlist anchor element */
+#navlist a:hover {
+    background-color: rgb(247, 0, 0);
+    color: black;
+}
+      
+/* styling search bar */
+.search input[type=text]{
+    width:300px;
+    height:25px;
+    border-radius:25px;
+    border: none;
+}
+      
+.search{
+    float:right;
+    margin:7px;
+}
+      
+.search button{
+    background-color: #000000;
+    color: #f2f2f2;
+    float: right;
+    padding: 5px 10px;
+    margin-right: 16px;
+    font-size: 12px;
+    border: none;
+    cursor: pointer;
+} 

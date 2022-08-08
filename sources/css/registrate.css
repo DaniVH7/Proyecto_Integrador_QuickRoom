@@ -1,0 +1,38 @@
+body{
+    background-color: #1B262C;
+}
+.container
+{
+    background-color: #1B262C;
+    width: 100%;
+    height: 97vh;
+}
+.iniciar{
+    border: 1px solid #BBE1FA;
+    width: 100%;
+    height: 99.5%;
+}
+.nuevo{
+    width: 100%;
+    height: 20%;
+    text-align: center;
+    color: white;
+}
+.datos{
+    width: 100%;
+    height: 73%;
+    color: white;
+    text-align: center;
+}
+.image{
+    width: 100%;
+    height: 15%;
+    color: white;
+    float: right;
+}
+table,tr{
+    border: 1px solid wheat;
+    margin: auto;
+    color: #BBE1FA;
+}
+

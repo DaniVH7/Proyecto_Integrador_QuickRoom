@@ -1,0 +1,43 @@
+body{
+    background-color: rgb(208, 1, 27);
+}
+.container
+{
+    border: 1px solid black;
+    background-color: rgb(208, 1, 27);
+    width: 100%;
+    height: 97vh;
+}
+.imagen{
+    margin-left: 30%;
+    background-color: rgb(208, 1, 27);
+    width: 40%;
+    height: 25%;
+}
+.selecciona{
+    background-color: rgb(208, 1, 27);
+    width: 100%;
+    height: 5%;
+    color: white;
+    text-align: center;
+}
+.admin{
+    border: 1px solid black;
+    background-color: rgb(208, 1, 27);
+    width: 50%;
+    height: 50%;
+    text-align: center;
+
+}
+.user{
+    border: 1px solid black;
+    background-color: rgb(208, 1, 27);
+    width: 49%;
+    height: 38%;
+    text-align: center;
+}
+.boton.uno{
+    background-color: rgb(216, 198, 198);
+    width: 100%;
+    height: 100%;
+}

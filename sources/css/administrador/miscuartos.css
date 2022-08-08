@@ -1,0 +1,38 @@
+body{
+    background-color: #1B262C;
+}
+.container
+{
+    border: 1px solid black;
+    background-color: #1B262C;
+    width: 100%;
+    height: 97vh;
+}
+.miscuartos{
+    border: 1px solid #BBE1FA;
+    background-color: #0F4C75;
+    width: 100%;
+    height: 12%;
+    text-align: center;
+    color: #BBE1FA;
+}
+.tabla{
+    border: 1px solid black;
+    width: 100%;
+    height: 80%;
+}
+table {
+	border: 1px solid black;
+    width: 100%;
+    height: 10%;
+}
+td{
+    border: 1px solid black;
+    width: 30%;
+    height: 20%;
+    text-align: center;
+    color: white;
+}
+.anterior{
+    float: right;
+}

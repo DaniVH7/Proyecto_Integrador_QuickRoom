@@ -1,0 +1,39 @@
+body{
+    background-color: #1B262C;
+}
+.container
+{
+    border: 1px solid #BBE1FA;
+    background-color: #1B262C;
+    width: 100%;
+    height: 97vh;
+}
+.cuadro{
+    border: 1px solid #BBE1FA;
+    width: 50%;
+    height: 50%;
+    margin: auto;
+    border: outset;
+    border-radius: 10px 40px 40px 10px;
+}
+.nuevo{
+    width: 100%;
+    height: 20%;
+    text-align: center;
+    color: white;
+}
+.iniciar{
+    border: 1px solid #BBE1FA;
+    width: 50%;
+    height: 100%;
+    margin-left: 20%;
+}
+.nosotros{
+    color: white;
+    width: 50%;
+    height: 20%;
+    margin: auto;
+    border: outset;
+    border-radius: 30px 10px 10px 40px;
+    text-align: center;
+}

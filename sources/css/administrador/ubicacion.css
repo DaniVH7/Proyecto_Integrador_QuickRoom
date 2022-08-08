@@ -1,0 +1,28 @@
+body{
+    background-color: rgb(208, 1, 27);
+}
+.container
+{
+    background-color: rgb(208, 1, 27);
+    width: 100%;
+    height: 100vh;
+}
+
+.texto{
+    border: 1px solid black;
+    width: 50%;
+    height: 10%;
+    margin: auto;
+    margin-top: 5%;
+    text-align: center;
+}
+.ubicacion{
+    border: 1px solid white;
+    width: 70%;
+    height: 65%;
+    margin: auto;
+    text-align: center;
+}
+.siguiente{
+    float: right;
+}

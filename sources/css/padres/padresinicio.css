@@ -1,0 +1,30 @@
+body{
+    background-color: #1B262C;
+}
+.container
+{
+    border: 1px solid #BBE1FA;
+    background-color: #1B262C;
+    width: 100%;
+    height: 96vh;
+}
+.iniciar{
+    width: 100%;
+    height: 95vh;
+}
+
+.texto{
+    width: 100%;
+    height: 7%;
+    background-color: #0F4C75;
+    justify-content: center;
+    text-align: center;
+    color: #BBE1FA;
+}
+.cuadro{
+    width: 100%;
+    height: 83%;
+    justify-content: center;
+    text-align: center;
+    color: #BBE1FA;
+}

@@ -1,0 +1,70 @@
+body{
+    background-color: #1B262C;
+}
+.container
+{
+    background-color: #1B262C;
+    width: 100%;
+    height: 90vh;
+}
+.imagen{
+    width: 100%;
+    height: 30%;
+}
+.logo{
+    width: 50%;
+    height: 100%;
+    margin: auto;
+}
+.recuadro{
+    border: 1px solid #BBE1FA;
+    width: 100%;
+    min-height: 75%;
+}
+.texto{
+    border: 1px solid #BBE1FA;
+    width: 100%;
+    height: 20%;
+    text-align: center;
+    color:white;
+}
+.dentro{
+    border: 1px solid #1B262C;
+    width: 100%;
+    height: 81%;
+}
+.admin{
+    width: 49.8%;
+    height: 70%;
+    float: right;
+    margin-top: 5%;
+}
+.user{
+    width: 49.8%;
+    height: 70%;
+    margin-top: 5%;
+}
+.btn1{
+    border: 1px solid #BBE1FA;
+    margin-top: 5%;
+    background-color: #0F4C75;
+    width: 100%;
+    height: 50%;
+    color: #BBE1FA;
+    cursor: pointer;
+}
+.padres{
+    border: 1px solid white;
+    width: 49.8%;
+    height: 10vh;
+    margin-top: 5%;
+    margin: auto;
+}
+.botondos{
+    border: .5px solid #BBE1FA;
+    background-color: #0F4C75;
+    width: 100%;
+    height: 100%;
+    color: #BBE1FA;
+    cursor: pointer;
+}

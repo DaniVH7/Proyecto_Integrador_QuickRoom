@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <html lang="es"></html>
+
+    <head>
+        <title>Validar Usuario</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="../sources/css/padres/iniciodesesionpadres.css">
+        <link rel="icon" href="../sources/images/white_logo_transparent_background.png" type="image/png">
+    </head>
+    <body>
+        <main class="iniciar">
+        <h1>Inicio de Sesion Para Padres</h1>
+        <form action="../php/padres/verificapapa.php" method="post">
+            <fieldset>
+                <table>
+                    <div class="image"><img src="../sources/images/white_logo_transparent_background.png" style="width: 100%; height:100%;" alt="Logo de Quick Room"></div>
+                    <tr>
+                        <td class="izq"><lable for="user" class="lbl">Usuario:</lable></td>
+                        <td class="der"><input class="txt" type="text" id="user" name="user" 
+                            placeholder="Nombre Asignado"></td>
+                    </tr>
+                    <tr>
+                        <td class="izq"><label for="contra" class="lbl">Contrase&ntilde;a</label></td>
+                        <td class="der"><input class="txt" type="password" id="contra" name="contra"
+                            placeholder="Contraseña Generada"></td>
+                    </tr>
+                    <tr>
+                        <td class="izq"></td>
+                        <td class="der">
+                            <input class="btn" type="submit" name="send" value="Validar">&nbsp;
+                            <input class="btn" type="reset" name="clear" value="Limpiar">
+                        </td>
+                    </tr>
+                    
+                </table>
+            </fieldset>
+        </form>
+        <div class="olvidaste"><a href="recuperarcontraseñapadres.html" style="color: white;"> ¿Olvidaste tu Contraseña?</a></div><br><br>
+            <div class="registrate"><a href="registrate.html" style="color: white;">Registrate</a></div>
+            <footer><div class="anterior"><a href="../index.html" style="color: white; float: right;">Anterior</div></footer>
+
+        </main>
+    </body>
+</html>

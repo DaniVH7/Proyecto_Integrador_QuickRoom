@@ -1,0 +1,60 @@
+body{
+    background-color: #1B262C;
+}
+.container
+{
+    border: 1px solid #BBE1FA;
+    background-color: #1B262C;
+    width: 100%;
+    height: 97vh;
+}
+.iniciar{
+    width: 100%;
+    height: 97vh;
+}
+
+.busqueda{
+    width: 100%;
+    height: 50%;
+    margin-top: 7%;
+}
+.busquedarapida{
+    width: 70%;
+    color: #BBE1FA;
+    height: 30%;
+    margin: auto;
+    margin-top: 2%;
+    text-align: center;
+    cursor: pointer;
+    border: inset;
+}
+.boton {
+    width: 100%;
+    height: 100%;
+    background-color: #3282B8;
+    cursor: pointer;
+}
+.boton:hover{
+    background-color: #BBE1FA;
+}
+
+.texto{
+    width: 100%;
+    height: 12%;
+    background-color: #0F4C75;
+    justify-content: center;
+    text-align: center;
+    color: #BBE1FA;
+}
+.imagen1{
+    width: 100%;
+    height: 33%;
+    justify-content: center;
+    text-align: center;
+}
+.cerrar{
+    float: right;
+}
+.pie{
+    color: #BBE1FA;
+}

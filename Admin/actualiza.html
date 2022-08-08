@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+ <meta charset="utf-8">
+    <title>Cuartos Express
+    </title>
+    <link rel="stylesheet" type="text/css" href="../sources/css/administrador/actualiza.css">
+    <link rel="icon" href="../sources/images/white_logo_transparent_background.png" type="image/png">
+    <body>
+        <main class="container">
+            <div class="iniciar">
+                <div class="texto"><h1>Actualiza tus cuartos</h1></div><br>
+                    <div class="tabla">
+                        <form action="../php/actualizacuarto.php" method="post" enctype="multipart/form-data"> 
+                            <table>
+                                <tr>
+                                    <td class="izq">
+                                        <label class="lbl" for="txtCodigo">Cuarto:</label>
+                                    </td>
+                                    <td class="der">
+                                        <input type="text" class="txtCodigo" id="txtCodigo" name=
+                                        "txtCodigo" placeholder="Numero de Cuartos">
+                                    </td>
+                                </tr>
+                                    <tr>
+                                        <td class="izq">
+                                            <label class="lbl" for="precio">Precio:</label>
+                                        </td>
+                                        <td class="der">
+                                            <input type="text" class="precio" id="precio" name=
+                                            "precio" placeholder="Monto">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="izq">
+                                            <label class="lbl" for="amueblado">Amueblado:</label>
+                                        </td>
+                                        <td class="der">
+                                            <input type="text" class="amueblado" id="amueblado" name=
+                                            "amueblado" placeholder="Si o No">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="izq">
+                                            <label class="lbl" for="agua">Agua:</label>
+                                        </td>
+                                        <td class="der">
+                                            <input type="text" class="agua" id="agua" name=
+                                            "agua" placeholder="Si o No">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="izq">
+                                            <label class="lbl" for="luz">Luz:</label>
+                                        </td>
+                                        <td class="der">
+                                            <input type="text" class="luz" id="luz" name=
+                                            "luz" placeholder="Si o No">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="izq">
+                                            <label class="lbl" for="internet">Internet:</label>
+                                        </td>
+                                        <td class="der">
+                                            <input type="text" class="internet" id="internet" name=
+                                            "internet" placeholder="Si o No">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="izq">
+                                            <label class="lbl" for="vigilancia">Vigilancia:</label>
+                                        </td>
+                                        <td class="der">
+                                            <input type="text" class="vigilancia" id="vigilancia" name=
+                                            "vigilancia" placeholder="Si o No">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="izq">
+                                            <label class="lbl" for="cocina">Cocina:</label>
+                                        </td>
+                                        <td class="der">
+                                            <input type="text" class="cocina" id="cocina" name=
+                                            "cocina" placeholder="Si o No">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="izq">
+                                            <label class="lbl" for="baño">Baño Compartido:</label>
+                                        </td>
+                                        <td class="der">
+                                            <input type="text" class="baño" id="baño" name=
+                                            "baño" placeholder="Si o No">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="izq">
+                                            <label class="lbl" for="cuarto">Cuarto Compartido:</label>
+                                        </td>
+                                        <td class="der">
+                                            <input type="text" class="cuarto" id="cuarto" name=
+                                            "cuarto" placeholder="Si o No">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="izq">
+                                            <label class="lbl" for="renta">Tiempo de renta:</label>
+                                        </td>
+                                        <td class="der">
+                                            <input type="text" class="renta" id="renta" name=
+                                            "renta" placeholder="Si o No">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="izq">
+                                            <label class="lbl" for="condominio">Tipo de condominio:</label>
+                                        </td>
+                                        <td class="der">
+                                            <input type="text" class="condominio" id="condominio" name=
+                                            "condominio" placeholder="Si o No">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="izq">
+                                            <label class="lbl" for="calle">Calle:</label>
+                                        </td>
+                                        <td class="der">
+                                            <input type="text" class="calle" id="calle" name=
+                                            "calle" placeholder="Nombre de la Calle">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="izq">
+                                            <label class="lbl" for="txtEstado">Estado:</label>
+                                        </td>
+                                        <td class="der">
+                                            <input type="text" class="txtEstado" id="txtEstado" name=
+                                            "txtEstado" placeholder="Estado en donde se ubica">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="izq">
+                                            <label class="lbl" for="municipio">Municipio:</label>
+                                        </td>
+                                        <td class="der">
+                                            <input type="text" class="municipio" id="municipio" name=
+                                            "municipio" placeholder="Si o No">
+                                        </td>
+                                    </tr><tr>
+                                        <td class="izq">
+                                            <label class="lbl" for="txtDisponible">Disponibilidad:</label>
+                                        </td>
+                                        <td class="der">
+                                            <input type="text" class="txt" id="txtDisponible" name=
+                                            "txtDisponible" placeholder="Disponible-Ocupado">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="izq">
+                                            <label class="lbl" for="fileFoto"> Imagen: </label>
+                                        </td>
+                                        <td class="der">
+                                            <input type="hidden" name="MAX_FILE_SIZE" value="500000" />
+                                            <input type="file" class="txt" id="fileFoto" name="fileFoto"
+                                            placeholder="Imagen del Cuarto">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <td class="izq">
+                                                </td>
+                                        <td class="der">
+                                            <input type="submit" class="btn" id="enviar"
+                                            value="Actualizar">&nbsp;
+                                            <input type="reset" class="btn" id="borrar"
+                                            value="limpiar">
+                                        </td>    
+                                    </tr>
+                                </tr>
+                                
+                </div>
+                <footer>
+                    <div class="tablas"><a href="ayudaadmin.html" style="color: white;">Ayuda
+                    <div class="anterior"><a href="admin.html".html" style="color: white;">Anterior</div></footer>
+            </div>
+        </main>
+    </body>
+</html>

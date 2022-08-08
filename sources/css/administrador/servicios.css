@@ -1,0 +1,54 @@
+body{
+    background-color: rgb(208, 1, 27);
+}
+.container
+{
+    background-color: rgb(208, 1, 27);
+    width: 100%;
+    height: 100vh;
+}
+
+.queofreces{    
+    border: 1px solid white;
+    width: 50%;
+    height: 10%;
+    margin: auto;
+    margin-top: 2%;
+    text-align: center;
+}
+.cuadro{
+    border: 1px solid black;
+    width: 80%;
+    height: 69%;
+    margin: auto;
+    margin-top: 5%;
+    text-align: center;
+}
+.cuadro2{
+    width: 52%;
+    height: 100%;
+    text-align: center;
+    float: right;
+}
+.cuadritos2{
+    border: 1px solid white;
+    width: 47%;
+    height: 24.5%;
+}
+.cuadritos{
+    border: 1px solid white;
+    width:100%;
+    height: 24.5%;
+}
+.cuadritos21{
+    border: 1px solid white;
+    width: 100%;
+    height: 24.5%;
+}
+.texto1
+{
+    border: 1px solid white;
+    width: 100%;
+    height: 50%;
+    float: right;
+}

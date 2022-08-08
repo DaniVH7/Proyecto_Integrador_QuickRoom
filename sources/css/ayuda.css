@@ -1,0 +1,68 @@
+body{
+    background-color: #1B262C;
+}
+.container
+{
+    border: 1px solid #BBE1FA;
+    background-color: #1B262C;
+    width: 100%;
+    height: 90vh;
+}
+.iniciar{
+    border: 1px solid black;
+    width: 100%;
+    height: 100%;
+}
+.texto{
+    color: #BBE1FA;
+    background-color: #0F4C75;
+    width: 100%;
+    height: 8%;
+    text-align: center;
+    justify-content: center;
+}
+.masconsultado{
+    width: 100%;
+    height: 10%;
+    text-align: center;
+    color: #BBE1FA;
+}
+.cuadros{
+    border: 1px solid #BBE1FA;
+    width: 100%;
+    height: 55%;
+    text-align: center;
+    color: #BBE1FA;
+    flex-direction: row ;
+}
+.cuadritos{
+    border: 1px solid #3282B8;
+    width: 48%;
+    height: 38%;
+    text-align: center;
+    color: #BBE1FA;
+    margin-top: 2.68%;
+}
+.cuadritos1{
+    border: 1px solid #3282B8;
+    width: 50%;
+    height: 38.2%;
+    text-align: center;
+    color: #BBE1FA;
+    float: right;
+    margin-top: 2.6%;
+}
+.asesor{
+    width: 100%;
+    height: 20%;
+}
+.boton{
+    border: 1px solid #BBE1FA;
+    width: 100%;
+    height: 7vh;
+    background-color: #3282B8;
+    cursor: pointer;
+}
+.boton:hover{
+    background-color: #BBE1FA;
+}
