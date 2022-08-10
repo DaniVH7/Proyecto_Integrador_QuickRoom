@@ -18,5 +18,10 @@ body{
     text-align: center;
 }
 .anterior{
-    float: left;
+    float: right;
+}
+table{
+    margin-top: -20%;
+    margin-left: 35%;
+    color: #BBE1FA;
 }

@@ -30,9 +30,9 @@ body{
     color: white;
     float: right;
 }
-table,tr{
-    border: 1px solid wheat;
-    margin: auto;
+table{
+    margin-top: -20%;
+    margin-left: 35%;
     color: #BBE1FA;
 }
 

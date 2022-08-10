@@ -21,7 +21,7 @@ body{
 .busquedarapida{
     width: 70%;
     color: #BBE1FA;
-    height: 30%;
+    height: 20%;
     margin: auto;
     margin-top: 2%;
     text-align: center;
@@ -37,6 +37,7 @@ body{
 .boton:hover{
     background-color: #BBE1FA;
 }
+
 
 .texto{
     width: 100%;

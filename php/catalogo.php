@@ -10,7 +10,7 @@
         <style>
             table{margin: auto; width: 900px; border-collapse: collapse}
             table, tr, th, td { border: 1px solid gray; background-color: black;}
-            td {width: 125px; color: #0099ff;} th{color:#BBE1FA}
+            td {width: 125px; color: #0099ff; text-align:center;} th{color:#BBE1FA}
         </style>
     </head>
 <body>
@@ -23,11 +23,9 @@
             $bd_user = "root";
             $bd_pass = "";
             $bd_name = "quickroom";
-            define('NUM_ITEMS_BY_PAGE', 2);
         
             $conectar = mysqli_connect($bd_host, $bd_user, $bd_pass, $bd_name);
             
-
             if (mysqli_connect_errno())
             {
                 printf("ERROR: %u - %s", mysqli_connect_errno(), mysqli_connect_error());
@@ -35,17 +33,19 @@
             }
             mysqli_set_charset($conectar, "utf8");
             $consultar = "SELECT id_cuarto,precio,amueblado,agua,luz,internet,vigilancia,cocina,baño_compartido,
-            cuarto_compartido,tiempo_renta,fotografias FROM cuartos";
+            cuarto_compartido,tiempo_renta,disponibilidad,fotografias FROM cuartos";
 
             if ($resultado = mysqli_query($conectar, $consultar))
             {
                 printf ("<table><tr><th>Id</th> <th>Precio</th> <th>Amueblado</th> <th>Agua</th> <th>Luz</th> <th>Internet</th> <th>Vigilancia</th> 
-                <th>Cocina</th> <th>Baño Compartido</th> <th>Cuarto Compartido</th> <th>Tiempo de renta</th> <th>Fotografias</th> <th>Renta Ahora</th>
+                <th>Cocina</th> <th>Baño Compartido</th> <th>Cuarto Compartido</th> <th>Tiempo de renta</th> <th>Disponibilidad</th> <th>Fotografias</th> <th>Renta Ahora</th>
                 </tr>");
                 while ($fila = mysqli_fetch_row($resultado))
                 {
                     printf ("<tr><td>%d</td> <td>%d</td>  <td>%s</td> <td>%s</td>  <td>%s</td>  <td>%s</td>  <td>%s</td>  <td>%s</td>  <td>%s</td> 
-                    <td>%s</td>  <td>%s</td>  <td><img src='../sources/images/bicho.jpg'></td>  <td ><a href='../Rentas/nuevarenta.html' style='color:#BBE1FA;''>Renta Ahora</a></td> </tr>", 
+                    <td>%s</td>  <td>%s</td> <td>%s</td>  
+                    <td class='der'><img src='data:image/jpg;base64,". $fila[10]." 'alt='imagen acerca del Cuarto' /></td>
+                    <td ><a href='../Rentas/nuevarenta.html' style='color:#BBE1FA;''>Renta Ahora</a></td> </tr>", 
                     $fila[0], $fila[1], $fila[2], $fila[3], $fila[4], $fila[5], $fila[6], $fila[7], $fila[8], $fila[9], $fila[10], $fila[11]
                     );
                 }

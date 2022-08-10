@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+ <meta charset="utf-8">
+    <title>Cuartos Express
+    </title>
+    <link rel="stylesheet" type="text/css" href="../sources/css/rentas.css">
+    <link rel="icon" href="../sources/images/white_logo_transparent_background.png" type="image/png">
+    <meta nombre="ventana" contenido="escala-inicial=1">
+    <body>
+        <head>
+            <style>
+                body{background-color: #1B262C;}
+            .container{background-color: #1B262C;width: 100%;height: 97vh;}
+            .iniciar{border: 1px solid #BBE1FA;width: 100%;height: 100%;}
+            .renta{background-color: #0F4C75;margin-left: 25%;margin-top: 1%;width: 50%;height: 7%;text-align:
+                center;color: #BBE1FA;font-size: 6.5vh;}
+            .apartado{border: 1px solid green;width: 40%;height: 85%;margin-top: 1%; margin-left: 30%;}
+            table{
+    margin-top: -20%;
+    margin-left: 20%;
+    color: #BBE1FA;
+}
+            </style>
+        </head>
+    <main class="container">
+        <header class="iniciar">
+            <div class="renta">Renta Ahora</div>
+            <div class="apartado">
+                <form action="../php/rentas/nuevarenta.php" method="post">
+                    <table>
+                        <tr>
+                            <td class="izq">
+                                <label class="lbl" for="cuarto">Numero de Cuarto: </label>
+                            </td>
+                            <td class="der">
+                                <input type="text" class="cuarto" id="cuarto" name=
+                                "cuarto" placeholder="Numero de Cuaro <--1">
+                            </td>
+                        </tr><br><br>
+                        <tr>
+                            <td class="izq">
+                                <label class="lbl" for="estudiante">Numero de Estudiante</label>
+                            </td>
+                            <td class="der">
+                                <input type="text" class="estudiante" id="estudiante" name=
+                                "estudiante" placeholder="Numero de Estudiante <--">
+                            </td>
+                        </tr><br><br>
+                        
+                        <tr>
+                            <td class="izq">
+                                <label class="lbl" for="rentar">Inicio de renta: </label>
+                            </td>
+                            <td class="der">
+                                <input type="date" class="rentar" id="rentar" name=
+                                "rentar"  >
+                            </td>
+                        </tr><br><br>
+                        <tr>
+                            <td class="izq">
+                                <label class="lbl" for="tiempo">Tiempo a Rentar: </label>
+                            </td>
+                            <td class="der">
+                                <input type="text" class="tiempo" id="tiempo" name=
+                                "tiempo" placeholder="Tiempo en Meses">
+                            </td>
+                        </tr><br><br>
+                        
+                            
+                            </tr>
+                        </tr><br><br>
+                        <tr>
+                            <td class="izq"></td>
+                            <td class="der">
+                                <input class="btn" type="submit" name="send" value="Enviar">&nbsp;
+                                <input class="btn" type="reset" name="clear" value="Borrar">
+                            </td>
+                        </tr><br><br>
+                    </table>
+            </div>
+            <footer><a href="../php/catalogo.php" style="color: white; float: right;">Anterior</footer>
+
+        </header>
+    </main>        
+</body>
