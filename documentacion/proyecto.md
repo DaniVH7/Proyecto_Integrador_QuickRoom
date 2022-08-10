@@ -93,7 +93,7 @@ CREATE TABLE `cuartos` (
   `calle` varchar(250) DEFAULT NULL,
   `estado` varchar(250) DEFAULT NULL,
   `municipio` varchar(250) DEFAULT NULL,
-  `geomapa` varchar(250) DEFAULT NULL,
+  `disponibilidad` varchar(250) DEFAULT NULL,
   `fotografias` varchar(250) 
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
