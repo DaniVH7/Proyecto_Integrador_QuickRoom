@@ -41,7 +41,7 @@
                             <table>
                                 <tr>
                                     <th>Numero de Cuarto</th>
-                                    <th>Id de Estudiante</th>
+                                    <th>Numero de Estudiante</th>
                                     <th>Inicio de Renta </th>
                                     <th>Tiempo limite de Renta</th>
                                     <th>Paga</th>
@@ -70,8 +70,9 @@
                     $conMySQL = null;
                     }
                 ?>
-        </div>
-        <footer><div class="ayuda"><a href="../../Admin/ayudaadmin.html" style="color: #BBE1FA;">Ayuda
+ <footer><div class="ayuda"><a href="../../Admin/ayudaadmin.html" style="color: #BBE1FA;">Ayuda
             <div class="antes"><a href="usuario.html" style="color:#BBE1FA; float:right;">Regresar</a></footer>
+        </div>
+       
     </main>
 </body>

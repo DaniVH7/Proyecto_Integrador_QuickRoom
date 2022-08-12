@@ -35,7 +35,7 @@
             #
             if ($resultado = mysqli_query($conectar, $insertar))
             {
-                printf("Registro almacenado en la BD");
+                header("Location:../../PAdres/registroalmacenado.html");
             }
             else 
             {

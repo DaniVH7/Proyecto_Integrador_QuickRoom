@@ -8,5 +8,35 @@ body{
     height: 96vh;
 }
 .letras{
-    color: #13c0e5;
+    color: #BBE1FA;
+    border: 1px solid #BBE1FA;
+    width: 100%;
+    height: 10%;
+    background-color: #0F4C75;
+}
+.consultas{
+    border:1px solid greenyellow;
+    width: 50%;
+    height: 85%;
+    margin: auto;
+}
+.consultasdentro{
+    border:1px solid greenyellow;
+    width: 50%;
+    height: 12%;
+    margin: auto;
+    margin-top: 4%;
+}
+.botonuno{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: #0F4C75;
+    color:#BBE1FA;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    cursor: pointer;
+    position: relative;
 }

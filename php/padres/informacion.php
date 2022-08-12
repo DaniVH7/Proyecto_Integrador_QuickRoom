@@ -40,9 +40,9 @@
                    foreach($conMySQL->query($sentenciaSQL) as $fila)
                        {
                            printf ("<div><table><tr>
-                           </tr> <tr><th class='izq'>Id del Alumno:</th>
+                           </tr> <tr><th class='izq'>Nombre del  Alumno:</th>
                            <td class='der'>%s</td></tr> <tr><th class='izq'>Id del Cuarto</th>
-                           <td class='der'>%u</td></tr> <tr><th class='izq'>Inicio de Rentas:</th>
+                           <td class='der'>%s</td></tr> <tr><th class='izq'>Inicio de Rentas:</th>
                            <td class='der'>%s</td></tr> <tr><th class='izq'>Renovar el contrato en:</th>
                            <td class='der'>%s</td></tr> <tr><th class='izq'>Pagar Renta</th>
                            <td class='der'>%s----<a href='#s' style=color:#BBE1FA;'>Paga</td>
@@ -64,7 +64,9 @@
                    }
                 ?>
                 <div class="seguridad">
-                    <div class="clase">Dad</div>
+                    <div class="clase">Seguridad</div>
+                    <div class="letras" style='color:white; text-align:center;'><h1>Por el momento no hay nada<br>
+                    configurado para ver la seguridad</h1></div>
                 </div>
                 </div>
                 

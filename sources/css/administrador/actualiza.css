@@ -22,13 +22,21 @@ body{
     color: #BBE1FA;
     text-align: center;
 }
+.textouno{
+    border: 1px solid #BBE1FA;
+    width: 99.7%;
+    height: 7%;
+    background-color: #0F4C75;
+    color: #BBE1FA;
+    text-align: center;
+}
 .tabla{
     width: 99.7%;
     height: 60%;
 }
 table{
     margin-bottom: 20%;
-    margin-left: 20%;
+    margin-left: 35%;
     color: #BBE1FA;
 }
 .anterior{

@@ -42,12 +42,10 @@
                 </tr>");
                 while ($fila = mysqli_fetch_row($resultado))
                 {
-                    printf ("<tr><td>%d</td> <td>%d</td>  <td>%s</td> <td>%s</td>  <td>%s</td>  <td>%s</td>  <td>%s</td>  <td>%s</td>  <td>%s</td> 
-                    <td>%s</td>  <td>%s</td> <td>%s</td>  
-                    <td class='der'><img src='data:image/jpg;base64,". $fila[10]." 'alt='imagen acerca del Cuarto' /></td>
-                    <td ><a href='../Rentas/nuevarenta.html' style='color:#BBE1FA;''>Renta Ahora</a></td> </tr>", 
-                    $fila[0], $fila[1], $fila[2], $fila[3], $fila[4], $fila[5], $fila[6], $fila[7], $fila[8], $fila[9], $fila[10], $fila[11]
-                    );
+                    printf ("<tr><td>%d</td> <td>%d</td>  <td>%s</td> <td>%s</td>  <td>%s</td>  <td>%s</td>  <td>%s</td>  
+                    <td>%s</td> <td>%s</td> <td>%s</td> <td>%s</td>  </td><td>%s</td> <td><img src='data:image/jpg;base64,". $fila[12]." 
+                    'alt='imagen acerca del Cuarto' />  <td><a href='../Rentas/nuevarenta.html"."' style='color: #BBE1FA;'>Renta Ahora</a></td></tr>", 
+                    $fila[0], $fila[1],$fila[2],$fila[3],$fila[4],$fila[5],$fila[6],$fila[7],$fila[8],$fila[9],$fila[10],$fila[11]);
                 }
                 printf ("</table>");
 

@@ -10,10 +10,10 @@
     <head>
         <title> Conectar la BD-PHP con MYSQL </title>
         <style>
-            body{ background-color: #0F4C75;}
+            body{ background-color: #1B262C;}
             table{margin: auto; width: 900px; border-collapse: collapse; }
             table, tr, th, td { border: 1px solid gray; justify-content: center; background-color: black;}
-            td {width: 125px; color: #ffcc00; } th{color:white}
+            td {width: 125px; color: #ffcc00; text-align:center; } th{color:white}
             .container{border: 1px solid #BBE1FA;background-color: #1B262C;width: 100%;height: 97vh;}
             .iniciar{width: 100%;height: 100%;}
         </style>
@@ -36,16 +36,16 @@
                 exit();
             }
             mysqli_set_charset($conectar, "utf8");
-            $consultar = "SELECT id_cuarto,agua FROM cuartos where agua ='$agua'";
+            $consultar = "SELECT id_cuarto,agua,precio FROM cuartos where agua ='$agua'";
 
             if ($resultado = mysqli_query($conectar, $consultar))
             {
                 printf ("<table><tr> <th>Cuarto</th> 
-                 <th>Tiene Agua</th> <th>Renta</th> </tr>");
+                 <th>Tiene Agua</th> <th>Precio</th> <th>Renta</th> </tr>");
                 while ($fila = mysqli_fetch_row($resultado))
                 {
-                    printf ("<tr> <td>%d</td> <td>%s</td> <td><a href='../rentaahora.php"."'>TExto</a></td> </tr>", 
-                    $fila[0], $fila[1]);
+                    printf ("<tr> <td>%d</td> <td>%s</td> <td>%s</td> <td><a href='../../Rentas/rentafija.html"."' style='color: #BBE1FA;'>Renta Ahora</a></td> </tr>", 
+                    $fila[0], $fila[1],$fila[2]);
                 }
                 printf ("</table>");
                 mysqli_free_result($resultado);

@@ -13,7 +13,7 @@
             body{ background-color: #0F4C75;}
             table{margin: auto; width: 900px; border-collapse: collapse}
             table, tr, th, td { border: 1px solid gray; background-color: black;}
-            td {width: 125px; color: #ffcc00;} th{color:white}
+            td {width: 125px; color: #ffcc00; text-align:Center;} th{color:white}
         </style>
     </head>
     
@@ -40,7 +40,7 @@
                  <th>¿Tiene Internet?</th> <th>Renta</th> </tr>");
                 while ($fila = mysqli_fetch_row($resultado))
                 {
-                    printf ("<tr> <td>%d</td> <td>%s</td> </tr>", 
+                    printf ("<tr> <td>%d</td> <td>%s</td> <td><a href='../../Rentas/rentafija.html"."' style='color: #BBE1FA;'>Renta Ahora</a></td> </tr>", 
                     $fila[0], $fila[1]);
                 }
                 printf ("</table>");

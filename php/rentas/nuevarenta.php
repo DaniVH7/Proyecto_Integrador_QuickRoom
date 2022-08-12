@@ -21,45 +21,45 @@
             <div class="renta">Renta Ahora</div>
             <div class="apartado">
             <?php
-try
-{
-$conMySQL = new PDO("mysql:host=localhost; port=3306;dbname=quickroom", "root", "");
+                    try
+                    {
+                    $conMySQL = new PDO("mysql:host=localhost; port=3306;dbname=quickroom", "root", "");
 
-$conMySQL->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+                    $conMySQL->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 
-#
-$cuarto = (int)$_POST["cuarto"];
-$estudiante = (int)$_POST["estudiante"];
-$rentar = htmlspecialchars($_POST["rentar"]);
-$tiempo = htmlspecialchars($_POST["tiempo"]);
+                    #
+                    $cuarto = htmlspecialchars($_POST["cuarto"]);
+                    $estudiante = htmlspecialchars($_POST["estudiante"]);
+                    $rentar = htmlspecialchars($_POST["rentar"]);
+                    $tiempo = htmlspecialchars($_POST["tiempo"]);
 
 
-$sentenciaSQL = "INSERT INTO rentas 
-values(null,null,?,?,?,?)";
+                    $sentenciaSQL = "INSERT INTO rentas 
+                    values(null,null,?,?,?,?)";
 
-$sentenciaPrep = $conMySQL->prepare($sentenciaSQL);
-$sentenciaPrep->bindParam(1, $cuarto);
-$sentenciaPrep->bindParam(2, $estudiante);
-$sentenciaPrep->bindParam(3, $rentar);
-$sentenciaPrep->bindParam(4, $tiempo);
+                    $sentenciaPrep = $conMySQL->prepare($sentenciaSQL);
+                    $sentenciaPrep->bindParam(1, $cuarto);
+                    $sentenciaPrep->bindParam(2, $estudiante);
+                    $sentenciaPrep->bindParam(3, $rentar);
+                    $sentenciaPrep->bindParam(4, $tiempo);
 
-if ($sentenciaPrep->execute())
-{
-    header("Location:../../Admin/regresaalinicio.html");
-}
-else
-{
-printf("Error al almacenar en la Base de Datos");
-}
-}
-catch (PDOException $e)
-{
-print "¡Error!: " . $e->getMessage() . "</br>";
-die();
-}
-finally
-{ $conMySQL = null; }
-?>
+                    if ($sentenciaPrep->execute())
+                    {
+                        header("Location:../../Usuario/regresaalinicio.html");
+                    }
+                    else
+                    {
+                    printf("Error al almacenar en la Base de Datos");
+                    }
+                    }
+                    catch (PDOException $e)
+                    {
+                    print "¡Error!: " . $e->getMessage() . "</br>";
+                    die();
+                    }
+                    finally
+                    { $conMySQL = null; }
+                    ?>
             </div>
         </header>
     </main>        
