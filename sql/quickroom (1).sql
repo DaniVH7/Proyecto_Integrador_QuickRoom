@@ -26,7 +26,7 @@ SET time_zone = "+00:00";
 --
 -- Estructura de tabla para la tabla `administradores`
 --
-
+drop table if exists administradores;
 CREATE TABLE `administradores` (
   `id_administrador` int(11) NOT NULL,
   `nombre` varchar(250) DEFAULT NULL,
@@ -47,7 +47,7 @@ CREATE TABLE `administradores` (
 --
 -- Estructura de tabla para la tabla `cuartos`
 --
-
+drop table if exists cuartos;
 CREATE TABLE `cuartos` (
   `id_cuarto` int(11) NOT NULL,
   `precio` varchar(12) DEFAULT NULL,
@@ -82,7 +82,7 @@ INSERT INTO `cuartos` (`id_cuarto`, `precio`, `amueblado`, `agua`, `luz`, `inter
 --
 -- Estructura de tabla para la tabla `estudiantes`
 --
-
+drop table if exists estudiantes;
 CREATE TABLE `estudiantes` (
   `id_estudiante` int(11) NOT NULL,
   `nombre` varchar(250) DEFAULT NULL,
@@ -107,7 +107,7 @@ CREATE TABLE `estudiantes` (
 --
 -- Estructura de tabla para la tabla `padres`
 --
-
+drop table if exists padres;
 CREATE TABLE `padres` (
   `id_padre` int(11) NOT NULL,
   `nombre` varchar(250) DEFAULT NULL,
@@ -125,7 +125,7 @@ CREATE TABLE `padres` (
 --
 -- Estructura de tabla para la tabla `registros`
 --
-
+drop table if exists registros;
 CREATE TABLE `registros` (
   `id_registro` int(11) NOT NULL,
   `nombre` varchar(250) DEFAULT NULL,
@@ -143,13 +143,13 @@ CREATE TABLE `registros` (
 --
 -- Estructura de tabla para la tabla `rentas`
 --
-
+drop table if exists rentas;
 CREATE TABLE `rentas` (
   `id_renta` int(11) NOT NULL,
   `id_administrador` int(11) DEFAULT NULL,
   `id_estudiante` int(11) DEFAULT NULL,
   `id_cuarto` int(11) DEFAULT NULL,
-  `fecha` date DEFAULT NULL,
+  `fecha` date DEFAULT current_timestamp,
   `tiempo_de_renta` varchar(250) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
