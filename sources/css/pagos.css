@@ -44,6 +44,16 @@ body{
     height: 100%;
     background-color: #3282B8;
     cursor: pointer;
+    color:white;
+}
+.efectivo{
+    border: 1px solid #BBE1FA;
+    margin: auto;
+    width: 50%;
+    height: 100%;
+    background-color: #3282B8;
+    cursor: pointer;
+    color: white;
 }
 .image{
     width: 100%;

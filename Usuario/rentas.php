@@ -51,7 +51,7 @@
                                     <td>%s</td>
                                     <td>%s</td>
                                     <td>%s</td>
-                                    <td><a href='' style='color:#BBE1FA;'>Paga Renta</td>
+                                    <td><a href='pagos.html' style='color:#BBE1FA;'>Paga Renta</td>
                                 </tr>
                             </table><br>",
                             $fila[0],$fila[1],$fila[2],$fila[3]);

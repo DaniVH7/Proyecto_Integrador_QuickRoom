@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+ <meta charset="utf-8">
+ <html lang="es"></html>
+
+    <title>Cuartos Express
+    </title>
+    <link rel="stylesheet" type="text/css" href="../sources/css/cuenta.css">
+    <link rel="icon" href="../sources/images/white_logo_transparent_background.png" type="image/png">
+    <body>
+    <main class="container">
+        <div class="iniciar">
+            <div class="texto"><h1>Tarjeta de Credito o Debito</h1></div>
+            <form action="../php/tarjeta.php" method="post">
+                <table>
+                    <tr>
+                        <td>Numero de la Tarjeta:<input type="text" class="numtarjeta" id="numtarjeta" name=
+                            "numtarjeta" placeholder="Numero de tarjeta"></td>
+                        <td>Nombre(s):<input type="text" class="nombres" id="nombres" name=
+                            "nombres" placeholder="Nombre(s)" required></td>
+                    </tr>
+                    <tr>
+                        <td>Fecha de Vencimiento:<input type="date" class="vence" id="vence" name=
+                            "vence"  ></td>
+                        <td>Apellidos:<input type="text" class="apellidos" id="apellidos" name=
+                            "apellidos" placeholder="Apellido(s)" required></td>
+                    </tr>
+                    <tr>
+                        <td>Tipo de Tarjeta:<input type="text" class="tipo" id="tipo" name=
+                            "tipo" placeholder="Credito o Debito" ></td>
+                        <td>Correo:<input type="email" class="correo" id="correo" name=
+                            "correo" placeholder="Correo electronico" required></td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">Codigo de Seguridad:<input type="text" class="codigo" id="codigo" name=
+                            "codigo" placeholder="CSV" required></td>
+                        
+                    </tr>
+                    <tr>
+                        <td>
+                            <input class="btn" type="submit" name="send" value="Enviar">&nbsp;
+                            <input class="btn" type="reset" name="clear" value="Borrar">
+                        </td>
+                    </tr>
+                </table>
+        </form>
+            <footer style="float: right;"><a href="pagos.html" style="color: white;">Regresar</a></footer>
+        </div>
+    </main>
+    </body>
+</html>
+    
