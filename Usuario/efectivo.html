@@ -11,19 +11,22 @@
     <main class="container">
         <div class="iniciar">
             <div class="texto"><h1>Pago en Efectivo</h1></div>
+            <form action="../php/efectivo.php" method="post">
             <table>
                 <tr>
                     <th>Dia</th>
                     <th>Efectivo a Pagar</th>
-                    <th>Lugar en de la cita</th>
+                    <th>Lugar donde se pago</th>
                 </tr>
                 <tr>
-                    <td><input type="date" class="txtNombre" id="txtNombre" name=
-                        "txtNombre" placeholder="" required></td>
-                    <td><input type="text" class="txtNombre" id="txtNombre" name=
-                        "txtNombre" placeholder="$$$$" required></td>
-                    <td><input type="text" class="txtNombre" id="txtNombre" name=
-                        "txtNombre" placeholder="Lugar" required></td>
+                    <td><input type="date" class="txtfecha" id="txtfecha" name=
+                        "txtfecha" placeholder="" required></td>
+
+                    <td><input type="number" class="txttotal" id="txttotal" name=
+                        "txttotal" placeholder="$$$$" required></td>
+                    
+                        <td><input type="text" class="txtcita" id="txtcita" name=
+                        "txtcita" placeholder="Lugar" required></td>
                 </tr>
                 <tr>
                     <td></td>
@@ -33,6 +36,7 @@
                     </td>
                 </tr>
             </table>
+            </form>
             <footer style="float: right;"><a href="pagos.html" style="color: white;">Regresar</a></footer>
         </div>
     </main>

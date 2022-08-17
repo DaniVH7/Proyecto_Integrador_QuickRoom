@@ -16,7 +16,7 @@ body{
 .busqueda{
     width: 100%;
     height: 50%;
-    margin-top: 7%;
+    ;
 }
 .busquedarapida{
     width: 70%;
@@ -53,4 +53,8 @@ body{
 }
 .pie{
     color: #BBE1FA;
+}
+.config{
+    width: 5%;
+    height: 10%;
 }

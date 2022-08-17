@@ -34,7 +34,7 @@
                     $conMySQL ->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
                     $conMySQL ->exec("SET CHARACTER SET UTF8");
                     #
-                    $sentenciaSQL = "SELECT id_cuarto,id_estudiante,fecha,tiempo_de_renta FROM rentas";
+                    $sentenciaSQL = "SELECT id_estudiante,id_cuarto,fecha,tiempo_de_renta FROM rentas";
                     foreach($conMySQL->query($sentenciaSQL) as $fila)
                         {
                             printf ("<div>

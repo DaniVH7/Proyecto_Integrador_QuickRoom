@@ -68,3 +68,12 @@ body{
     color: #BBE1FA;
     cursor: pointer;
 }
+.super{
+    width: 10%;
+    height: 15%;
+    background-color: #0F4C75;
+    justify-content: center;
+    text-align: center;
+    color: #BBE1FA;
+    float: right;
+}

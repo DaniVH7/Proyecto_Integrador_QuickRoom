@@ -11,11 +11,13 @@
     <main class="container">
         <div class="iniciar">
             <div class="texto"><h1>Elimina Cuartos</h1></div>
+            <script>
+                </script>
             <form action="../php/borrar.php" method="post">
                 <table>
                     <tr>
                         <td class="izq">
-                            <label class="lbl" for="codigo">Numero del Cuarto: </label>
+                            <label class="lbl" for="codigo">Numero de Cuarto que desea borrar: </label>
                         </td>
                         <td class="der">
                             <input type="text" class="codigo" id="codigo" name=
@@ -25,7 +27,21 @@
                     <tr>
                         <td class="izq"></td>
                         <td class="der">
-                            <input class="btn" type="submit" name="send" value="Validar">&nbsp;
+                            <script type="text/javascript">
+                                function confirmarRegistro()
+                                {
+                                   if (window.confirm("Desea eliminar el registro?") == true)
+                                      {
+                                         window.location = "../php/borrar.php";
+                                      }
+                                else
+                                   {
+                                      alert("Cancelado será redirigido a la pagina principal");
+                                      window.location ="../Admin/admin.html";
+                                   }
+                                }
+                                </script>
+                             <input type="submit" value="Eliminar registro" Onclick="confirmarRegistro();"/>
                             <input class="btn" type="reset" name="clear" value="Limpiar">
                         </td>
                     </tr>
