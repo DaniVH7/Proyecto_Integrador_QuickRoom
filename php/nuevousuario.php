@@ -32,7 +32,7 @@
     }
     mysqli_set_charset($conectar, "utf8");
 $insertar = "INSERT INTO estudiantes values(null,'$nombre','$apellidop', '$apellidom', '$fecha', '$usuario','$correo', 
-'$contra','$telefono',null,null)";
+'$contra','$telefono')";
 
 if ($resultado = mysqli_query($conectar, $insertar))
 {

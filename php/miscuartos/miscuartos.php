@@ -45,18 +45,18 @@
                     <td class='der'>%s</td></tr> <tr><th class='izq'>Municipio:</th>
                     <td class='der'>%s</td></tr> <tr><th class='izq'>Disponibilidad:</th>
                     <td class='der'>%s</td></tr> <tr><th class='izq'></th>
-                    <td class='der'></td></tr> <tr><th class='izq'>Imagen:</th>
+                    <tr><th class='izq'>Imagen:</th>
                     <td class='der'><img src='data:image/jpg;base64,". $fila[16]." 'alt='imagen acerca del Cuarto' /></td>
                     </tr></table><br></div>",
                     $fila[0], $fila[1], $fila[2], $fila[3],$fila[4],$fila[5],$fila[6],$fila[7],$fila[8],$fila[9]
-                    ,$fila[10],$fila[11],$fila[12],$fila[13],$fila[14],$fila[15]);
+                    ,$fila[10],$fila[11],$fila[12],$fila[13],$fila[14],$fila[15],$fila[16]);
                 }
             }
             
             #
             catch(PDOException $e)
             {
-            print "¡ERROR!: " . $e-> getMessage() . "<br>";
+            print "¡ERROR!: " . $e-> getMessage() . "<br>" ;
             die();
             }
             finally

@@ -32,16 +32,16 @@
                 exit();
             }
             mysqli_set_charset($conectar, "utf8");
-            $consultar = "SELECT id_cuarto,tiempo_renta, fotografias FROM cuartos where tiempo_renta='$renta'";
+            $consultar = "SELECT id_cuarto,tiempo_renta,disponibilidad FROM cuartos where tiempo_renta='$renta'";
 
             if ($resultado = mysqli_query($conectar, $consultar))
             {
                 printf ("<table><tr> <th>Cuarto</th> 
-                 <th>Tiempo de Renta</th> <th>Renta</th> </tr>");
+                 <th>Tiempo de Renta</th> <th>Estado</th><th>Renta</th> </tr>");
                 while ($fila = mysqli_fetch_row($resultado))
                 {
-                    printf ("<tr> <td>%s</td> <td>%s</td> <td><a href='../../Rentas/rentafija.html"."' style='color: #BBE1FA;'>Renta Ahora</a></td></tr>", 
-                    $fila[0], $fila[1]);
+                    printf ("<tr> <td>%s</td> <td>%s</td><td>%s</td> <td><a href='../../Rentas/rentafija.html"."' style='color: #BBE1FA;'>Renta Ahora</a></td></tr>", 
+                    $fila[0], $fila[1],$fila[2]);
                 }
                 printf ("</table>");
 

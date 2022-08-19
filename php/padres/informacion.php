@@ -11,9 +11,9 @@
             table, tr, th, td { border: 1px solid gray; justify-content: center; background-color: black;}
             td {width: 125px; color: #ffcc00; } th{color:#BBE1Fa;}
             .container{border: 1px solid #BBE1FA;background-color: #1B262C;width: 100%;height: 9vh;}
-            .iniciar{width: 100%;height: 100%;}
-            .texto{color: #bbe1fa;; text-align:center;font-size:7vh;}
-            .cuadro{width:100%; height:880%; border:1px solid blue;}
+            .iniciar{width: 100%;height: 100%; }
+            .texto{color: #bbe1fa; text-align:center;font-size:7vh; border:3.5px solid lawngreen;}
+            .cuadro{width:100%; height:880%; border:1px solid lawngreen;}
             .seguridad{width:50%; height:42%; border:1px solid beige; margin:auto;}
             .clase{border:1px solid black; width:99.8%;height:14%;text-align:center; color:#BBE1FA; font-size:4vh;}
         </style>
@@ -45,7 +45,7 @@
                            <td class='der'>%s</td></tr> <tr><th class='izq'>Inicio de Rentas:</th>
                            <td class='der'>%s</td></tr> <tr><th class='izq'>Renovar el contrato en:</th>
                            <td class='der'>%s</td></tr> <tr><th class='izq'>Pagar Renta</th>
-                           <td class='der'>%s----<a href='#s' style=color:#BBE1FA;'>Paga</td>
+                           <td class='der'>%s----<a href='../../Usuario/pagos.html' style=color:#BBE1FA;'>Paga</td>
                            </td></tr></table><br></div>",
                            $fila[0], $fila[1], $fila[2], $fila[3],$fila[3]);
                        }
@@ -63,11 +63,7 @@
                    $conMySQL = null;
                    }
                 ?>
-                <div class="seguridad">
-                    <div class="clase">Seguridad</div>
-                    <div class="letras" style='color:white; text-align:center;'><h1>Por el momento no hay nada<br>
-                    configurado para ver la seguridad</h1></div>
-                </div>
+                
                 </div>
                 
         <footer><a href="ayuda.html" style="color: #BBE1FA;">Ayuda</a>

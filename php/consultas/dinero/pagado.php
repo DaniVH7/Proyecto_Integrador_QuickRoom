@@ -16,7 +16,7 @@
 <body>
     <main class="container">
         <div class="iniciar">
-            <div class="texto"><h1>Total de Cuartos Ocupados</h1></div><br>
+            <div class="texto"><h1>Total de Pagos</h1></div><br>
             <div class="tabla">
                 <?php
                     $bd_host = "127.0.0.1";
@@ -32,27 +32,44 @@
                         exit();
                     }
                     mysqli_set_charset($conectar, "utf8");
-                    $consultar = "SELECT id_administrador,COUNT(id_cuarto), id_estudiante FROM rentas WHERE id_administrador = 1;";
+                    $consultar = "SELECT id_pago,dia,pago  FROM efectivo";
+                    $sentencia = "SELECT sum(pago) from efectivo";
 
                     if ($resultado = mysqli_query($conectar, $consultar))
                     {
-                        printf ("<table><tr><th>Id Administrador</th> <th>Total de Cuartos Ocupados</th>
-                         <th>Numero del Estudiante</th></tr>");
+                        printf ("<table><tr><th>Numero de Pago</th> <th>Fecha del pago</th> <th>Total del pago</th>
+                        </tr>");
                         while ($fila = mysqli_fetch_row($resultado))
                         {
-                            printf ("<tr><td>%d</td> <td>%s</td> <td>%s</td>
-                            ",$fila[0], $fila[1], $fila[2]);
+                            printf ("<tr> <td>%d</td> <td>%s</td>  <td>%s</td> </tr>
+                            ", 
+                            $fila[0], $fila[1], $fila[2]);
+                        }
+                        printf ("</table><br><br>");
+
+                        mysqli_free_result($resultado);
+                    }
+                    if ($resultado = mysqli_query($conectar, $sentencia))
+                    {
+                        printf ("<table><tr> <th>Suma Total de Pagos</th>
+                        ");
+                        while ($fila = mysqli_fetch_row($resultado))
+                        {
+                            printf ("<tr> <td>%d</td></tr>
+                            ", 
+                            $fila[0]);
                         }
                         printf ("</table>");
 
                         mysqli_free_result($resultado);
                     }
 
+
                     mysqli_close($conectar);
                 ?>
             </div>
             <div class="pie"><a href="ayuda.html" style="color: #BBE1FA;">Ayuda</a>
-                <div class="cerrar"><a href="../../Admin/consultas.html" style="color: #BBE1FA; float:right;">Anterior</a></div>
+                <div class="cerrar"><a href="../../../Usuario/pagos.html" style="color: #BBE1FA; float:right;">Anterior</a></div>
         </div>
     </main>
 </body>

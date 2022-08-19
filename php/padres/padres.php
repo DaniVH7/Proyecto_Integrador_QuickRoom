@@ -10,10 +10,10 @@
             table{margin: auto; width: 900px; border-collapse: collapse; }
             table, tr, th, td { border: 1px solid gray; justify-content: center; background-color: black;}
             td {width: 125px; color: #ffcc00; } th{color:white}
-            .container{border: 1px solid #BBE1FA;background-color: #1B262C;width: 100%;height: 9vh;}
+            .container{border: 1px solid lawngreen;background-color: #1B262C;width: 100%;height: 9vh;}
             .iniciar{width: 100%;height: 100%;}
-            .texto{color:white; text-align:center;font-size:6vh;}
-            .cuadro{width:100%; height:880%; border:1px solid blue;}
+            .texto{color:white; text-align:center;font-size:6vh; }
+            .cuadro{width:100%; height:880%; border:1px solid lawngreen;}
             .seguridad{width:50%; height:50%;}
         </style>
     </head>
@@ -35,7 +35,7 @@
                     $conMySQL ->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
                     $conMySQL ->exec("SET CHARACTER SET UTF8");
                     #
-                    $sentenciaSQL = "SELECT alumno FROM padres";
+                    $sentenciaSQL = "SELECT nombre FROM estudiantes where id_estudiante=1;";
                     foreach($conMySQL->query($sentenciaSQL) as $fila)
                         {
                             printf ("<div><table><tr>

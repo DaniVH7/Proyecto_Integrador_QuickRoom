@@ -16,7 +16,7 @@
 <body>
     <main class="container">
         <div class="iniciar">
-            <div class="texto"><h1>Total de Cuartos Ocupados</h1></div><br>
+            <div class="texto"><h1>Rentas totales de un Administrador</h1></div><br>
             <div class="tabla">
                 <?php
                     $bd_host = "127.0.0.1";
@@ -32,16 +32,20 @@
                         exit();
                     }
                     mysqli_set_charset($conectar, "utf8");
-                    $consultar = "SELECT id_administrador,COUNT(id_cuarto), id_estudiante FROM rentas WHERE id_administrador = 1;";
+                    $consultar = " SELECT rentas.id_renta, cuartos.id_cuarto, administradores.nombre AS 
+                    'Nombre de Arrendador', estudiantes.nombre AS 'Rentador', estudiantes.apellidop,estudiantes.apellidom 
+                    FROM rentas, cuartos, estudiantes, administradores 
+                    WHERE rentas.id_cuarto = cuartos.id_cuarto AND rentas.id_estudiante = estudiantes.id_estudiante AND
+                     rentas.id_administrador = administradores.id_administrador AND administradores.id_administrador = 1s;";
 
                     if ($resultado = mysqli_query($conectar, $consultar))
                     {
-                        printf ("<table><tr><th>Id Administrador</th> <th>Total de Cuartos Ocupados</th>
-                         <th>Numero del Estudiante</th></tr>");
+                        printf ("<table><tr><th>Numero de Renta</th> <th>Id Cuarto</th>
+                        <th>Nombre del Arrendador</th>  <th>Rentador</th> <th>Apellido Paterno</th> <th>Apellido Materno</th></tr>");
                         while ($fila = mysqli_fetch_row($resultado))
                         {
-                            printf ("<tr><td>%d</td> <td>%s</td> <td>%s</td>
-                            ",$fila[0], $fila[1], $fila[2]);
+                            printf ("<tr><td>%d</td> <td>%s</td>  <td>%s</td> <td>%s</td> <td>%s</td> <td>%s</td>
+                            ",$fila[0], $fila[1], $fila[2],$fila[3],$fila[4],$fila[5]);
                         }
                         printf ("</table>");
 
@@ -55,4 +59,4 @@
                 <div class="cerrar"><a href="../../Admin/consultas.html" style="color: #BBE1FA; float:right;">Anterior</a></div>
         </div>
     </main>
-</body>
+</body>1

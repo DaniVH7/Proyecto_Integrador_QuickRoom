@@ -36,16 +36,16 @@
                 exit();
             }
             mysqli_set_charset($conectar, "utf8");
-            $consultar = "SELECT id_cuarto,agua,precio FROM cuartos where agua ='$agua'";
+            $consultar = "SELECT id_cuarto,agua,precio, disponibilidad FROM cuartos where agua ='$agua'";
 
             if ($resultado = mysqli_query($conectar, $consultar))
             {
                 printf ("<table><tr> <th>Cuarto</th> 
-                 <th>Tiene Agua</th> <th>Precio</th> <th>Renta</th> </tr>");
+                 <th>Tiene Agua</th> <th>Precio</th><th>Disponibilidad</th>  <th>Renta</th> </tr>");
                 while ($fila = mysqli_fetch_row($resultado))
                 {
-                    printf ("<tr> <td>%d</td> <td>%s</td> <td>%s</td> <td><a href='../../Rentas/rentafija.html"."' style='color: #BBE1FA;'>Renta Ahora</a></td> </tr>", 
-                    $fila[0], $fila[1],$fila[2]);
+                    printf ("<tr> <td>%d</td> <td>%s</td> <td>%s</td> <td>%s</td> <td><a href='../../Rentas/rentafija.html"."' style='color: #BBE1FA;'>Renta Ahora</a></td> </tr>", 
+                    $fila[0], $fila[1],$fila[2],$fila[3]);
                 }
                 printf ("</table>");
                 mysqli_free_result($resultado);

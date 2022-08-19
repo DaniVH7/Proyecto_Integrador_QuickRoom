@@ -9,11 +9,14 @@
             $bd_user = "root";
             $bd_pass = "";
             $bd_name = "quickroom";
-            
-            $estudiante = htmlspecialchars($_POST["txtestudiante"]);
-            $cuarto = htmlspecialchars($_POST["txtcuarto"]);
-            $rentar = htmlspecialchars($_POST["txtrentar"]);
-            $tiempo = htmlspecialchars($_POST["txttiempo"]);
+
+            $nombre = htmlspecialchars($_POST["txtNombre"]);
+            $apellidop = htmlspecialchars($_POST["txtApellidop"]);
+            $apellidom = htmlspecialchars($_POST["txtApellidom"]);
+            $telefono = (int)$_POST["txtTelefono"];
+            $usuario = htmlspecialchars($_POST["txtUsuario"]);
+            $email = htmlspecialchars($_POST["txtCorreo"]);
+            $contra = md5($_POST["txtContraseña"]);
 
             $conectar = mysqli_connect($bd_host, $bd_user, $bd_pass, $bd_name );
             #
@@ -23,11 +26,11 @@
                 printf("ERROR: %u- %s", mysqli_connect_errno(), mysqli_connect_error());
                 exit();
             }
-            $insertar = "INSERT INTO rentas VALUES (null,null, '$estudiante', '$cuarto',
-             '$rentar', '$tiempo' )";
+            $insertar = "INSERT INTO administradores VALUES (null,'$nombre', '$apellidop', '$apellidom',
+             $telefono, '$usuario', '$email', '$contra' )";
             if ($resultado = mysqli_query($conectar, $insertar))
             {
-                header("Location:../../Rentas/registroalmacenado.html");
+                header("Location:../Admin/registroalmacenado.html");
             }
             else 
             {

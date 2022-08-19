@@ -9,12 +9,15 @@
             $bd_user = "root";
             $bd_pass = "";
             $bd_name = "quickroom";
-            
-            $estudiante = htmlspecialchars($_POST["txtestudiante"]);
-            $cuarto = htmlspecialchars($_POST["txtcuarto"]);
-            $rentar = htmlspecialchars($_POST["txtrentar"]);
-            $tiempo = htmlspecialchars($_POST["txttiempo"]);
-
+            #
+            $tarjeta = htmlspecialchars($_POST["numtarjeta"]);
+            $vence = htmlspecialchars($_POST["vence"]);
+            $tipo = htmlspecialchars($_POST["tipo"]);
+            $codigo = md5($_POST["codigo"]);
+            $nombres = htmlspecialchars($_POST["nombres"]);
+            $apellidos = htmlspecialchars($_POST["apellidos"]);
+            $correo = htmlspecialchars($_POST["correo"]);
+            #
             $conectar = mysqli_connect($bd_host, $bd_user, $bd_pass, $bd_name );
             #
             if (mysqli_connect_errno())
@@ -23,11 +26,16 @@
                 printf("ERROR: %u- %s", mysqli_connect_errno(), mysqli_connect_error());
                 exit();
             }
-            $insertar = "INSERT INTO rentas VALUES (null,null, '$estudiante', '$cuarto',
-             '$rentar', '$tiempo' )";
+            #
+            mysqli_set_charset($conectar, "utf8");
+            $insertar = "INSERT INTO tarjeta VALUES 
+            ('$tarjeta', '$vence', '$tipo', '$codigo', '$nombres',
+             '$apellidos', '$correo' )"; 
+
+            #
             if ($resultado = mysqli_query($conectar, $insertar))
             {
-                header("Location:../../Rentas/registroalmacenado.html");
+                printf("Registro almacenado en la BD");
             }
             else 
             {
@@ -38,3 +46,4 @@
         ?>
     </body>
 </html>
+

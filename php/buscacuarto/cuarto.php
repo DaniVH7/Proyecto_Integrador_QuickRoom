@@ -32,17 +32,17 @@
                 exit();
             }
             mysqli_set_charset($conectar, "utf8");
-            $consultar = "SELECT id_cuarto,cuarto_compartido, fotografias FROM cuartos where cuarto_compartido='$cuarto'";
+            $consultar = "SELECT id_cuarto,cuarto_compartido, disponibilidad,fotografias FROM cuartos where cuarto_compartido='$cuarto'";
 
             if ($resultado = mysqli_query($conectar, $consultar))
             {
                 printf ("<table><tr> <th>Cuarto</th> 
-                 <th>¿El Cuarto es Compartido?</th><th>Fotografias</th> <th>Renta</th>  </tr>");
+                 <th>¿El Cuarto es Compartido?</th> <th>Estado</th> <th>Fotografias</th> <th>Renta</th>  </tr>");
                 while ($fila = mysqli_fetch_row($resultado))
                 {
-                    printf ("<tr> <td>%d</td> <td>%s</td> <td><img src='data:image/jpg;base64,". $fila[2]." 
+                    printf ("<tr> <td>%d</td> <td>%s</td> <td>%s</td> <td><img src='data:image/jpg;base64,". $fila[3]." 
                     'alt='imagen acerca del Cuarto' /></td> <td><a href='../../Rentas/rentafija.html"."' style='color: #BBE1FA;'>Renta Ahora</a></td> </tr>", 
-                    $fila[0], $fila[1],$fila[2]);
+                    $fila[0], $fila[1],$fila[2],$fila[3]);
                 }
                 printf ("</table>");
 

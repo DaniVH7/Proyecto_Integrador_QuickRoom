@@ -16,7 +16,7 @@
 <body>
     <main class="container">
         <div class="iniciar">
-            <div class="texto"><h1>Cuartos Administrados</h1></div><br>
+            <div class="texto"><h1>Dinero recibido de rentas</h1></div><br>
             <div class="tabla">
                 <?php
                     $bd_host = "127.0.0.1";
@@ -32,17 +32,30 @@
                         exit();
                     }
                     mysqli_set_charset($conectar, "utf8");
-                    $consultar = " SELECT rentas.id_renta, cuartos.id_cuarto, administradores.nombre AS 'Nombre de Arrendador' FROM rentas, cuartos, administradores WHERE rentas.id_cuarto = cuartos.id_cuarto 
-                    AND rentas.id_administrador = administradores.id_administrador AND administradores.id_administrador = 1";
+                    $consultar = "SELECT id_pago,dia,pago  FROM efectivo;";
+                    $sentecia = "SELECT sum(pago)  FROM efectivo";
 
                     if ($resultado = mysqli_query($conectar, $consultar))
                     {
-                        printf ("<table><tr><th>Numero de Renta</th> <th>Numero del Cuarto</th>
-                         <th>Nombre del Administrador</th></tr>");
+                        printf ("<table><tr><th>Numero de Pago</th> <th>Dia</th>
+                         <th>Total</th></tr>");
                         while ($fila = mysqli_fetch_row($resultado))
                         {
                             printf ("<tr><td>%d</td> <td>%s</td>  <td>%s</td>
                             ",$fila[0], $fila[1], $fila[2]);
+                        }
+                        printf ("</table><br>");
+
+                        mysqli_free_result($resultado);
+                    }
+                    if ($resultado = mysqli_query($conectar, $sentecia))
+                    {
+                        printf ("<table><tr>
+                         <th>Total</th></tr>");
+                        while ($fila = mysqli_fetch_row($resultado))
+                        {
+                            printf ("<tr><td>%d</td> 
+                            ",$fila[0]);
                         }
                         printf ("</table>");
 
