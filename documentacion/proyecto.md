@@ -122,8 +122,7 @@ CREATE TABLE `estudiantes` (
   `correo` varchar(250) DEFAULT NULL,
   `contra` varchar(250) DEFAULT NULL,
   `telefono` varchar(10) DEFAULT NULL,
-  `estatus` varchar(250) DEFAULT NULL CHECK (`estatus` = 'Activo' or `estatus` = 'Inactivo'),
-  FOREIGN KEY (id_padre) REFERENCES padres(id_padre)
+  `estatus` varchar(250) DEFAULT NULL CHECK (`estatus` = 'Activo' or `estatus` = 'Inactivo')
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -149,24 +148,7 @@ CREATE TABLE `padres` (
   `correo` varchar(250) DEFAULT NULL,
   `contra` varchar(32) DEFAULT NULL,
   `telefono` varchar(10) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `registros`
---
-
-CREATE TABLE `registros` (
-  `id_registro` int PRIMARY KEY NOT NULL,
-  `nombre` varchar(250) DEFAULT NULL,
-  `apellidop` varchar(250) DEFAULT NULL,
-  `apellidom` varchar(250) DEFAULT NULL,
-  `fecha` date DEFAULT NULL,
-  `usuario` varchar(100) DEFAULT NULL,
-  `correo` varchar(250) DEFAULT NULL,
-  `contra` varchar(250) DEFAULT NULL,
-  `telefono` varchar(10) DEFAULT NULL
+  FOREIGN KEY (estudiantes) REFERENCES estudiantes(id_estudiante)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
