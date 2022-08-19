@@ -154,13 +154,11 @@ INSERT INTO `padres` (`id_padre`, `nombre`, `apellidop`, `apellidom`, `usuario`,
 
 CREATE TABLE `rentas` (
   `id_renta` int(11) NOT NULL,
-  `id_administrador` int(11) DEFAULT NULL,
   `id_estudiante` int(11) DEFAULT NULL,
   `id_cuarto` int(11) DEFAULT NULL,
   `fecha` date DEFAULT current_timestamp(),
   `tiempo_de_renta` varchar(250) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
 
 --
 -- Disparadores `rentas`
