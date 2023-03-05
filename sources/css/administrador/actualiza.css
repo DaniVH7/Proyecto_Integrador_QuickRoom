@@ -42,3 +42,13 @@ table{
 .anterior{
     float:right;
 }
+@media only screen and (max-width: 500px){
+    table{
+    color: #BBE1FA;
+    }
+    .tabla{
+        width: 50%;
+        height: 60%;
+    }
+
+}   

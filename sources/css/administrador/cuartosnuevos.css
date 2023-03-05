@@ -34,3 +34,21 @@ body{
 table{
     color: #BBE1FA;
 }
+@media only screen and (max-width: 500px){
+    .centro{
+        width: 100%;
+        margin-top: -20%;
+        text-align: center;
+    }
+    .derecha{
+        width: 100%;
+    }
+    .formulario{
+        width: 100%;
+        background-color: 0px solid #BBE1FA;
+    }
+    .form{
+        width: 70%;
+    }
+
+}

@@ -62,3 +62,12 @@ table
     color: #BBE1FA;
     outline: none;
 }
+@media only screen and (max-width: 500px){
+    .image{
+        margin-top: 130px;
+        width: 100px;
+        height: 100px;
+        color: white;
+        float: right;
+    }
+}

@@ -35,7 +35,7 @@ body{
 .agrega{
     border: 1px solid #BBE1FA;
     width: 70%;
-    height: 40%;
+    height: 70%;
     margin: auto;
     margin-top: 3%;
     border: inset;
@@ -138,9 +138,6 @@ body{
     text-decoration: none;
 }
 
-.antes{
-    float: right;
-}
 .consultas{
     border: 1px solid black;
     width: 80%;
@@ -150,4 +147,17 @@ body{
     margin-right: 10%;
     border: inset;
     float: right;
+}
+.footer{
+    border: 1px solid white;
+    background-color: red;
+}
+
+@media only screen and (max-width: 500px){
+    h1{
+        font-size: 30px;
+    }
+    .completa{
+        width: 100%;
+    }
 }

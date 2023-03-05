@@ -34,29 +34,23 @@
                     $conMySQL ->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
                     $conMySQL ->exec("SET CHARACTER SET UTF8");
                     #
-                    $sentenciaSQL = "SELECT id_estudiante,id_cuarto,fecha,tiempo_de_renta FROM rentas";
+                    $sentenciaSQL = "SELECT id_cuarto,calificacion,descripcion FROM calificacion";
                     foreach($conMySQL->query($sentenciaSQL) as $fila)
                         {
                             printf ("<div>
                             <table>
                                 <tr>
                                     <th>Numero de Cuarto</th>
-                                    <th>Numero de Estudiante</th>
-                                    <th>Inicio de Renta </th>
-                                    <th>Tiempo limite de Renta</th>
-                                    <th>Calififca el Cuarto</th>
-                                    <th>Paga</th>
+                                    <th>Calificacion </th>
+                                    <th>Descripcion</th>
                                 </tr>
                                 <tr>
                                     <td>%s</td>
                                     <td>%s</td>
                                     <td>%s</td>
-                                    <td>%s</td>
-                                    <td><a href='calificacuarto.html' style='color:#BBE1FA;'>Califica</td> 
-                                    <td><a href='pagos.html' style='color:#BBE1FA;'>Paga Renta</td>
                                 </tr>
                             </table><br>",
-                            $fila[0],$fila[1],$fila[2],$fila[3]);
+                            $fila[0],$fila[1],$fila[2]);
                         }
                     }
                     
@@ -73,7 +67,7 @@
                     }
                 ?>
  <footer><div class="ayuda"><a href="../../Admin/ayudaadmin.html" style="color: #BBE1FA;">Ayuda
-            <div class="antes"><a href="usuario.html" style="color:#BBE1FA; float:right;">Regresar</a></footer>
+            <div class="antes"><a href="../Usuario/rentas.php   " style="color:#BBE1FA; float:right;">Regresar</a></footer>
         </div>
        
     </main>

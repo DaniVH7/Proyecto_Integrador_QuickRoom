@@ -40,3 +40,17 @@ body{
     cursor: pointer;
     position: relative;
 }
+@media only screen and (max-width: 500px){
+    .consultas{
+    border:0px solid greenyellow;
+    width: 90%;
+    height: 85%;
+    margin: auto;
+}
+.consultasdentro{
+    width: 90%;
+    height: 12%;
+    margin: auto;
+    margin-top: 4%;
+}
+}
