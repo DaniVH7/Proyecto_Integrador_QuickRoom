@@ -19,7 +19,6 @@ $vigilancia = htmlspecialchars($_POST["txtVigilancia"]);
 $cocina = htmlspecialchars($_POST["txtCocina"]);
 $baño = htmlspecialchars($_POST["txtBaño"]);
 $compartido =htmlspecialchars($_POST["txtCompartido"]);
-$tiemporenta =htmlspecialchars($_POST["txtTiemporenta"]);
 $tipocondominio =htmlspecialchars($_POST["txtTipocondominio"]);
 $calle =htmlspecialchars($_POST["txtCalle"]);
 $estado =htmlspecialchars($_POST["txtEstado"]);
@@ -40,7 +39,7 @@ exit();
 #
 mysqli_set_charset($conectar, "utf8");
 $insertar = "INSERT INTO cuartos VALUES (null,'$precio','$amueblado','$agua','$luz','$internet','$vigilancia',
-'$cocina','$baño','$compartido','$tiemporenta','$tipocondominio',
+'$cocina','$baño','$compartido','$tipocondominio',
 '$calle','$estado','$municipio','$geomapa','$fotografia')";
 
 #
