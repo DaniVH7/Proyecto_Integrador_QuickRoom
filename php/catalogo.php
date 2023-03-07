@@ -32,17 +32,17 @@
                 exit();
             }
             mysqli_set_charset($conectar, "utf8");
-            $consultar = "SELECT id_cuarto, administradores.id_administrador,precio,amueblado,agua,luz,internet,vigilancia,cocina,baño_compartido,
-            cuarto_compartido,calificacion,disponibilidad,fotografias FROM cuartos, administradores where disponibilidad LIKE '%Disponible' and id_administrador = 1";
+            $consultar = "SELECT id_cuarto, administradores.nombre,precio,amueblado,agua,luz,internet,vigilancia,cocina,baño_compartido,
+            cuarto_compartido,tiempo_renta,disponibilidad,fotografias FROM cuartos, administradores where disponibilidad LIKE '%Disponible' and id_administrador = 1";
 
             if ($resultado = mysqli_query($conectar, $consultar))
             {
-                printf ("<table><tr><th>Numero de Cuarto</th> <th>Numero de Administrador</th> <th>Precio</th> <th>Amueblado</th> <th>Agua</th> <th>Luz</th> <th>Internet</th> <th>Vigilancia</th> 
-                <th>Cocina</th> <th>Baño Compartido</th> <th>Cuarto Compartido</th> <th>Caalificacion</th>   <th>Disponibilidad</th> <th>Fotografias</th> <th>Renta Ahora</th>
+                printf ("<table><tr><th>Numero de Cuarto</th> <th>Nombre de Administrador</th> <th>Precio</th> <th>Amueblado</th> <th>Agua</th> <th>Luz</th> <th>Internet</th> <th>Vigilancia</th> 
+                <th>Cocina</th> <th>Baño Compartido</th> <th>Cuarto Compartido</th> <th>Tiempo de renta</th>   <th>Disponibilidad</th> <th>Fotografias</th> <th>Renta Ahora</th>
                 </tr>");
                 while ($fila = mysqli_fetch_row($resultado))
                 {
-                    printf ("<tr><td>%d</td> <td>%d</td>  <td>%s</td> <td>%s</td>  <td>%s</td>  <td>%s</td>  <td>%s</td>  
+                    printf ("<tr><td>%d</td> <td>%s</td>  <td>%s</td> <td>%s</td>  <td>%s</td>  <td>%s</td>  <td>%s</td>  
                     <td>%s</td> <td>%s</td> <td>%s</td> <td>%s</td> <td>%s</td> </td><td>%s</td> <td><img src='data:image/jpg;base64,". $fila[13]." 
                     'alt='imagen acerca del Cuarto' />  <td><a href='../Rentas/nuevarenta.html"."' style='color: #BBE1FA;'>Renta Ahora</a></td></tr>", 
                     $fila[0], $fila[1],$fila[2],$fila[3],$fila[4],$fila[5],$fila[6],$fila[7],$fila[8],$fila[9],$fila[10],$fila[11],$fila[12],$fila[13]);

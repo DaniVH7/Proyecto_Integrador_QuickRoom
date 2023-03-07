@@ -39,14 +39,16 @@
             if (mysqli_connect_errno())
             {
             #
-            printf("ERROR: %u - %s", mysqli_connect_errno, mysqli_connect_error());
+            printf("ERROR: %u - %s", mysqli_connect_error(),
+
+            mysqli_connect_error());
             exit();
             }
             #
             mysqli_set_charset($conectar, "utf8");
             $actualizar = "UPDATE cuartos SET precio = '$precio', amueblado='$amueblado', agua ='$agua',
             luz='$luz', internet='$internet', vigilancia='$vigilancia',cocina='$cocina', baño_compartido='$b_compartido',
-            cuarto_compartido='$cuarto_comp',tiempo_renta='$t_renta',tipo_condominio='$t_condominio',
+            cuarto_compartido='$cuarto_comp', tiempo_renta='$t_renta', tipo_condominio='$t_condominio',
             calle='$calle',estado='$estado', municipio='$municipio', disponibilidad='$disponible', fotografias='$imagen'  WHERE id_cuarto = '$codigo'";
             #
             if ($resultado = mysqli_query($conectar, $actualizar))
