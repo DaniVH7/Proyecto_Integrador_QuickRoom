@@ -24,7 +24,7 @@
     <body>
     <main class="container">
         <div class="iniciar">
-                <div class="texto">Cuarto en Renta</div><br>
+                <div class="texto">Califica Cuartos</div><br>
                 <?php
                     try
                     {
@@ -34,29 +34,19 @@
                     $conMySQL ->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
                     $conMySQL ->exec("SET CHARACTER SET UTF8");
                     #
-                    $sentenciaSQL = "SELECT id_estudiante,id_cuarto,fecha,tiempo_de_renta FROM rentas";
+                    $sentenciaSQL = "SELECT id_cuarto FROM calificacion";
                     foreach($conMySQL->query($sentenciaSQL) as $fila)
                         {
                             printf ("<div>
-                            <table>
-                                <tr>
-                                    <th>Numero de Cuarto</th>
-                                    <th>Numero de Estudiante</th>
-                                    <th>Inicio de Renta </th>
-                                    <th>Tiempo limite de Renta</th>
-                                    <th>Calififca el Cuarto</th>
-                                    <th>Paga</th>
-                                </tr>
-                                <tr>
-                                    <td>%s</td>
-                                    <td>%s</td>
-                                    <td>%s</td>
-                                    <td>%s</td>
-                                    <td><a href='../php/calificacion/calificacuarto.php' style='color:#BBE1FA;'>Califica</td> 
-                                    <td><a href='pagos.html' style='color:#BBE1FA;'>Paga Renta</td>
-                                </tr>
-                            </table><br>",
-                            $fila[0],$fila[1],$fila[2],$fila[3]);
+                                <select type='hidden' name='cuarto' value='%s'>
+                                     <option value="value1">Value 1</option>
+                                    <option value="value2" selected>Value 2</option>
+                                    <option value="value3">Value 3</option>
+                                </select>
+                            <input type='submit' value='Calificar'>
+                            </form>
+                            </div>",
+                            $fila[0]);
                         }
                     }
                     
