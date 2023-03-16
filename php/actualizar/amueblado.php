@@ -18,7 +18,7 @@
             if (mysqli_connect_errno())
             {
                 #
-                printf("ERROR: %u - %s", mysqli_connect_errno(), mysqli_connect_error());
+                printf("ERROR: %u - %s", mysqli_connect_errno, mysqli_connect_error());
                 exit();
             }
             #
