@@ -38,7 +38,7 @@
             if ($resultado = mysqli_query($conectar, $consultar))
             {
                 printf ("<table><tr><th>Numero de Cuarto</th> <th>Numero de Administrador</th> <th>Precio</th> <th>Amueblado</th> <th>Agua</th> <th>Luz</th> <th>Internet</th> <th>Vigilancia</th> 
-                <th>Cocina</th> <th>Baño Compartido</th> <th>Cuarto Compartido</th> <th>Caalificacion</th>   <th>Disponibilidad</th> <th>Fotografias</th> <th>Renta Ahora</th>
+                <th>Cocina</th> <th>Baño Compartido</th> <th>Cuarto Compartido</th> <th>Calificacion</th>   <th>Disponibilidad</th> <th>Fotografias</th> <th>Renta Ahora</th>
                 </tr>");
                 while ($fila = mysqli_fetch_row($resultado))
                 {
@@ -56,7 +56,7 @@
         ?>
             </div>
             <div class="pie"><a href="ayuda.html" style="color: #BBE1FA;">Ayuda</a>
-                <div class="cerrar"><a href="../Usuario/usuario.html" style="color: #BBE1FA;">Anterior</a></div>
+                <div class="cerrar"><a href="../Usuario/usuario.php" style="color: #BBE1FA;">Anterior</a></div>
         </div>
     </main>
 </body>

@@ -90,9 +90,45 @@
 
             
         ?>
+        <div class="texto"><h1>Tarjeta de Acceso</h1></div>
+        <?php
+            $bd_host = "127.0.0.1";
+            $bd_user = "root";
+            $bd_pass = "";
+            $bd_name = "quickroom";
+        
+            $conectar = mysqli_connect($bd_host, $bd_user, $bd_pass, $bd_name);
+            
+            if (mysqli_connect_errno())
+            {
+                printf("ERROR: %u - %s", mysqli_connect_errno(), mysqli_connect_error());
+                exit();
+            }
+            mysqli_set_charset($conectar, "utf8");
+            $consultar = "SELECT  num_cuarto, uid_tarjeta, num_tarjeta from tarjetas  ";
+
+            if ($resultado = mysqli_query($conectar, $consultar))
+            {
+                printf ("<table><tr><th>Cuarto</th> <th>UID de Tarjeta</th> <th>Numero de Tarjeta</th> 
+                </tr>");
+                while ($fila = mysqli_fetch_row($resultado))
+                {
+                    printf ("<tr> <td>%s</td> <td>%s</td>  <td>%s</td>    
+                    </tr>", 
+                    $fila[0], $fila[1],$fila[2]);
+                }
+                printf ("</table>");
+
+                mysqli_free_result($resultado);
+            }
+
+            mysqli_close($conectar);
+
+            
+        ?>
             </div>
             <div class="pie"><a href="ayuda.html" style="color: #BBE1FA;">Ayuda</a>
-                <div class="cerrar"><a href="../Usuario/usuario.html" style="color: #BBE1FA;">Anterior</a></div>
+                <div class="cerrar"><a href="../Usuario/usuario.php" style="color: #BBE1FA;">Anterior</a></div>
         </div>
     </main>
 </body>

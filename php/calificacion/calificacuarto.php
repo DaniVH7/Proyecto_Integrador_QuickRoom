@@ -39,9 +39,10 @@
                         {
                             printf ("<div>
                                 <select type='hidden' name='cuarto' value='%s'>
-                                     <option value="value1">Value 1</option>
-                                    <option value="value2" selected>Value 2</option>
-                                    <option value="value3">Value 3</option>
+                                <option value='1'>1</option>
+                                <option value='2'>2</option>
+                                <option value='3'>3</option>
+                                
                                 </select>
                             <input type='submit' value='Calificar'>
                             </form>
@@ -63,7 +64,7 @@
                     }
                 ?>
  <footer><div class="ayuda"><a href="../../Admin/ayudaadmin.html" style="color: #BBE1FA;">Ayuda
-            <div class="antes"><a href="usuario.html" style="color:#BBE1FA; float:right;">Regresar</a></footer>
+            <div class="antes"><a href="../../Usuario/usuario.html" style="color:#BBE1FA; float:right;">Regresar</a></footer>
         </div>
        
     </main>
