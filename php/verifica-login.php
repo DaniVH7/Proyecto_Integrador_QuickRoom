@@ -21,7 +21,7 @@
                 $numRegistros = $sentenciaPrep->rowCount();
                 if ($numRegistros !=0)
                 {
-                    header("Location:../Usuario/usuario.html");
+                    header("Location:../Usuario/usuario.php");
                 } 
                 else
                 {

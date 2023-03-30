@@ -14,9 +14,9 @@ body{
 }
 
 .completa{
-    background-color: #0F4C75;
+    background-color: #3282B8;
     color: #BBE1FA;
-    width: 50%;
+    width: 90%;
     height: 14%;
     margin: auto;
     margin-top: 3%;
@@ -31,7 +31,12 @@ body{
     text-align: center;
     border: inset;
 }
-
+.notifi{
+    width: 10%;
+    height: 50%;
+    float: right;
+    margin-top: -75px;    
+}
 .agrega{
     border: 1px solid #BBE1FA;
     width: 70%;

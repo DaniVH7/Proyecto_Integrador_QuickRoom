@@ -23,7 +23,7 @@
             exit();
             }
             mysqli_set_charset($conectar, "utf8");
-            $insertar = "INSERT INTO calificacion VALUES (null,'$cuarto','$calificacion', '$descripcion' )";
+$insertar = "INSERT INTO calificacion (id_calificacion, id_cuarto, calificacion, descripcion) VALUES (null, '$cuarto', '$calificacion', '$descripcion')";
             if ($resultado = mysqli_query($conectar, $insertar))
             {
                 header("Location:../../calificacion/cuartocalificado.html");

@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="es">
-    <title>Resultados de la Busqueda</title>
 <head>
  <meta charset="utf-8">
+     <link rel="icon" href=".../../../../sources/images/white_logo_transparent_background.png" type="image/png">
+
 <html>
     <head>
         <title> Mis Cuartos </title>
