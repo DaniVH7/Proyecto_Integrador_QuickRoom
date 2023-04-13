@@ -16,11 +16,11 @@ body{
 .busqueda{
     width: 100%;
     height: 50%;
-    ;
 }
 .busquedarapida{
     width: 70%;
-    color: #BBE1FA;
+    background-color: #13AFDF;
+    color: black;
     height: 20%;
     margin: auto;
     margin-top: 2%;
@@ -29,7 +29,7 @@ body{
 .boton {
     width: 100%;
     height: 100%;
-    background-color: #3282B8;
+    background-color:#0F4C75;
     cursor: pointer;
     color: #BBE1FA;
 }
@@ -38,7 +38,7 @@ body{
     width: 100%;
     height: 15%;
     background-color: #0F4C75;
-    color: #BBE1FA;
+    color: black;
 }
 
 

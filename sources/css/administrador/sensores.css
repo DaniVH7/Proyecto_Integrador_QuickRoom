@@ -1,6 +1,13 @@
 body{
     background-color: #1B262C;
 }
+.tittle{
+    color: #BBE1FA;
+    border: 1px solid #BBE1FA;
+    width: 100%;
+    height: 10%;
+    background-color: #0F4C75;
+}
 .container
 {
     border: 1px solid #BBE1FA;
