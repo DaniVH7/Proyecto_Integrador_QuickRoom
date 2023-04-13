@@ -44,6 +44,7 @@
                                     <th>Numero de Estudiante</th>
                                     <th>Inicio de Renta </th>
                                     <th>Tiempo limite de Renta</th>
+                                    <th>Calififca el Cuarto</th>
                                     <th>Paga</th>
                                 </tr>
                                 <tr>
@@ -51,6 +52,7 @@
                                     <td>%s</td>
                                     <td>%s</td>
                                     <td>%s</td>
+                                    <td><a href='calificacuarto.html' style='color:#BBE1FA;'>Califica</td> 
                                     <td><a href='pagos.html' style='color:#BBE1FA;'>Paga Renta</td>
                                 </tr>
                             </table><br>",
@@ -71,7 +73,7 @@
                     }
                 ?>
  <footer><div class="ayuda"><a href="../../Admin/ayudaadmin.html" style="color: #BBE1FA;">Ayuda
-            <div class="antes"><a href="usuario.html" style="color:#BBE1FA; float:right;">Regresar</a></footer>
+            <div class="antes"><a href="usuario.php" style="color:#BBE1FA; float:right;">Regresar</a></footer>
         </div>
        
     </main>
