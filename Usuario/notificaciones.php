@@ -43,7 +43,7 @@
                             <td class="izq">
                             </td>
                             <td class="der">
-                                <input type="submit" class="btn" id="enviar" href="php/agregarnotificaciones.php"
+                                <input type="submit" class="btn" id="enviar" echo='Usuarios/agregarnotificacion.php'
                                 value="GUARDAR">&nbsp;
                                 <input type="reset" class="btn" id="borrar"
                                 value="limpiar">

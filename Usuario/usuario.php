@@ -31,8 +31,7 @@
 
                     <div class="texto"><h1>Bienvenido <?php echo $_SESSION['user']; ?>!</h1></div><br> 
                     <div class="notify"><a class="notifica" href="notificaciones.php"><img src="../sources/images/campana.png" style="width: 15%; height:10%;" alt="Imagen de notificaciones"></a></div>        
-                    <button id="button">Enviar notificacion
-                    </button>
+                    <button id="button">Enviar notificacion </button>
                     <script src="main.js"></script>                 
                     <h1 style=margin-left:25%;>Renta de Forma Segura</h1>
 
